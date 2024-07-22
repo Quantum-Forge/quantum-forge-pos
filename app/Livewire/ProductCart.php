@@ -219,15 +219,15 @@ class ProductCart extends Component
         $sub_total = 0;
 
         if ($product['product_tax_type'] == 1) {
-            $price = $product_price + ($product_price * ($product['product_order_tax'] / 100));
-            $unit_price = $product_price;
-            $product_tax = $product_price * ($product['product_order_tax'] / 100);
-            $sub_total = $product_price + ($product_price * ($product['product_order_tax'] / 100));
-        } elseif ($product['product_tax_type'] == 2) {
             $price = $product_price;
             $unit_price = $product_price - ($product_price * ($product['product_order_tax'] / 100));
             $product_tax = $product_price * ($product['product_order_tax'] / 100);
             $sub_total = $product_price;
+        } elseif ($product['product_tax_type'] == 2) {
+            $price = $product_price + ($product_price * ($product['product_order_tax'] / 100));
+            $unit_price = $product_price;
+            $product_tax = $product_price * ($product['product_order_tax'] / 100);
+            $sub_total = $product_price + ($product_price * ($product['product_order_tax'] / 100));
         } else {
             $price = $product_price;
             $unit_price = $product_price;
