@@ -55,20 +55,20 @@
                                 <input id="due_amount" type="text" class="form-control" value="0" readonly>
                             </div>
                             <div class="form-group">
-                                <label for="payment_method">Payment Method <span class="text-danger">*</span></label>
+                                <label for="payment_method">{{ __('product_cart.payment_method') }}<span class="text-danger">*</span></label>
                                 <select class="form-control" name="payment_method" id="payment_method" required>
                                     @foreach (App\Interface\PaymentMethod::getAllPaymentMethod() as $item)
-                                        <option value="{{ $item->name }}">{{ $item->name }}</option>
+                                        <option value="{{ $item->value }}">{{ $item->displayName() }}</option>
                                     @endforeach
                                 </select>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="note">Note (If Needed)</label>
+                                <textarea name="note" id="note" rows="5" class="form-control"></textarea>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="print_invoice" name="print_invoice" checked>
                                 <label class="form-check-label" for="print_invoice">Print Invoice</label>
-                            </div>
-                            <div class="form-group">
-                                <label for="note">Note (If Needed)</label>
-                                <textarea name="note" id="note" rows="5" class="form-control"></textarea>
                             </div>
                         </div>
                         <div class="col-lg-5">

@@ -78,7 +78,7 @@
                                                     class="text-danger">*</span></label>
                                             <select class="form-control" name="payment_method" id="payment_method" required>
                                                 @foreach (App\Interface\PaymentMethod::getAllPaymentMethod() as $item)
-                                                    <option value="{{ $item->name }}">{{ $item->name }}</option>
+                                                    <option value="{{ $item->value}}">{{ $item->displayName() }}</option>
                                                 @endforeach
                                             </select>
                                         </div>

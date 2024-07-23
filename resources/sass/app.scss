@@ -4386,7 +4386,7 @@ html:not([dir=rtl]) .form-check {
 }
 .form-check-input {
   position: absolute;
-  margin-top: 0.3rem;
+  margin-top: 3px;
 }
 html:not([dir=rtl]) .form-check-input {
   margin-left: -1.25rem;
@@ -9566,6 +9566,7 @@ color: white;
 }
 .c-sidebar.c-sidebar-light.c-sidebar-minimized .c-sidebar-nav-item:hover > .c-sidebar-nav-link, .c-sidebar.c-sidebar-light.c-sidebar-minimized .c-sidebar-nav-item:hover > .c-sidebar-nav-dropdown-toggle {
   background: var(--primary);
+  color: #fff;
 }
 .c-sidebar.c-sidebar-light.c-sidebar-minimized .c-sidebar-nav-item:hover > .c-sidebar-nav-link .c-sidebar-nav-icon, .c-sidebar.c-sidebar-light.c-sidebar-minimized .c-sidebar-nav-item:hover > .c-sidebar-nav-dropdown-toggle .c-sidebar-nav-icon {
   color: #fff;

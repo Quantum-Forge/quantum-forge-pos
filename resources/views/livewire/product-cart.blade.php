@@ -19,14 +19,14 @@
             <table class="table table-bordered">
                 <thead class="thead-dark">
                 <tr>
-                    <th class="align-middle">Product</th>
-                    <th class="align-middle text-center">Net Unit Price</th>
-                    <th class="align-middle text-center">Stock</th>
-                    <th class="align-middle text-center">Quantity</th>
-                    <th class="align-middle text-center">Discount</th>
-                    <th class="align-middle text-center">Tax</th>
-                    <th class="align-middle text-center">Sub Total</th>
-                    <th class="align-middle text-center">Action</th>
+                    <th class="align-middle">{{ __('product_cart.product') }}</th>
+                    <th class="align-middle text-center">{{ __('product_cart.net_unit_price') }}</th>
+                    <th class="align-middle text-center">{{ __('product_cart.stock') }}</th>
+                    <th class="align-middle text-center">{{ __('product_cart.quantity') }}</th>
+                    <th class="align-middle text-center">{{ __('product_cart.discount') }}</th>
+                    <th class="align-middle text-center">{{ __('product_cart.tax') }}</th>
+                    <th class="align-middle text-center">{{ __('product_cart.sub_total') }}</th>
+                    <th class="align-middle text-center">{{ __('product_cart.action') }}</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -80,7 +80,7 @@
                         <tr>
                             <td colspan="8" class="text-center">
                         <span class="text-danger">
-                            Please search & select products!
+                            {{ __('product_cart.search_select_products') }}
                         </span>
                             </td>
                         </tr>
@@ -95,15 +95,15 @@
             <div class="table-responsive">
                 <table class="table table-striped">
                     <tr>
-                        <th>Tax ({{ $global_tax }}%)</th>
+                        <th>{{ __('product_cart.tax') }} ({{ $global_tax }}%)</th>
                         <td>(+) {{ format_currency(Cart::instance($cart_instance)->tax()) }}</td>
                     </tr>
                     <tr>
-                        <th>Discount ({{ $global_discount }}%)</th>
+                        <th>{{ __('product_cart.discount') }} ({{ $global_discount }}%)</th>
                         <td>(-) {{ format_currency(Cart::instance($cart_instance)->discount()) }}</td>
                     </tr>
                     <tr>
-                        <th>Shipping</th>
+                        <th>{{ __('product_cart.shipping') }}</th>
                         <input type="hidden" value="{{ $shipping }}" name="shipping_amount">
                         <td>(+) {{ format_currency($shipping) }}</td>
                     </tr>
@@ -126,19 +126,19 @@
     <div class="form-row">
         <div class="col-lg-4">
             <div class="form-group">
-                <label for="tax_percentage">Tax (%)</label>
+                <label for="tax_percentage">{{ __('product_cart.tax') }} (%)</label>
                 <input wire:model.blur="global_tax" type="number" class="form-control" name="tax_percentage" min="0" max="100" value="{{ $global_tax }}" required>
             </div>
         </div>
         <div class="col-lg-4">
             <div class="form-group">
-                <label for="discount_percentage">Discount (%)</label>
+                <label for="discount_percentage">{{ __('product_cart.discount') }} (%)</label>
                 <input wire:model.blur="global_discount" type="number" class="form-control" name="discount_percentage" min="0" max="100" value="{{ $global_discount }}" required>
             </div>
         </div>
         <div class="col-lg-4">
             <div class="form-group">
-                <label for="shipping_amount">Shipping</label>
+                <label for="shipping_amount">{{ __('product_cart.shipping') }}</label>
                 <input wire:model.blur="shipping" type="number" class="form-control" name="shipping_amount" min="0" value="0" required step="0.01">
             </div>
         </div>
