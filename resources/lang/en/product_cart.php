@@ -20,4 +20,9 @@ return [
     'discount_type' => 'Discount Type',
     'product_category' => 'Product Category',
     'product_count' => 'Product Count',
+    'total_amount' => 'Total Amount',
+    'total_received' => 'Total Received',
+    'due_amount' => 'Due Amount',
+    'note' => 'Note (If needed)',
+    'total_products' => 'Total Products',
 ];
