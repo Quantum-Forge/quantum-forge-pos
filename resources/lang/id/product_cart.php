@@ -11,7 +11,7 @@ return [
     'tax' => 'Pajak',
     'sub_total' => 'Sub Total',
     'action' => 'Aksi',
-    'shipping' => 'Pengiriman',
+    'shipping' => 'Ongkir',
     'grand_total' => 'Total Keseluruhan',
     'search_select_products' => 'Silakan cari & pilih produk',
     'payment_method' => 'Metode Pembayaran',
@@ -20,4 +20,9 @@ return [
     'discount_type' => 'Tipe Discount',
     'product_category' => 'Kategori Produk',
     'product_count' => 'Total Produk',
+    'total_amount' => 'Jumlah Total',
+    'total_received' => 'Total Diterima',
+    'due_amount' => 'Jumlah Terutang',
+    'note' => 'Catatan (jika diperlukan)',
+    'total_products' => 'Total Produk',
 ];
