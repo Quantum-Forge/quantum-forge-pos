@@ -7,6 +7,7 @@ return [
     'create_product' => 'Create Product',
     'all_products' => 'All Products',
     'print_barcode' => 'Print Barcode',
+    'adjustment' => 'Adjustment',
     'stock_adjustments' => 'Stock Adjustments',
     'create_adjustment' => 'Create Adjustment',
     'all_adjustments' => 'All Adjustments',

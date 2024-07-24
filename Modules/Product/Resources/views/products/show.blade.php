@@ -4,7 +4,7 @@
 
 @section('breadcrumb')
     <ol class="breadcrumb border-0 m-0">
-        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('sidebar.home') }}</a></li>
         <li class="breadcrumb-item"><a href="{{ route('products.index') }}">Products</a></li>
         <li class="breadcrumb-item active">Details</li>
     </ol>
@@ -70,9 +70,9 @@
                                     <th>Tax Type</th>
                                     <td>
                                         @if($product->product_tax_type == 1)
-                                            Exclusive
+                                            Exclude PPN
                                         @elseif($product->product_tax_type == 2)
-                                            Inclusive
+                                            Include PPN
                                         @else
                                             N/A
                                         @endif

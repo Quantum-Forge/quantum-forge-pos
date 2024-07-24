@@ -4,7 +4,7 @@
 
 @section('breadcrumb')
     <ol class="breadcrumb border-0 m-0">
-        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('sidebar.home') }}</a></li>
         <li class="breadcrumb-item"><a href="{{ route('products.index') }}">Products</a></li>
         <li class="breadcrumb-item active">Edit</li>
     </ol>
@@ -108,8 +108,8 @@
                                         <label for="product_tax_type">Tax type</label>
                                         <select class="form-control" name="product_tax_type" id="product_tax_type">
                                             <option value="" selected>None</option>
-                                            <option {{ $product->product_tax_type == 1 ? 'selected' : '' }}  value="1">Exclusive</option>
-                                            <option {{ $product->product_tax_type == 2 ? 'selected' : '' }} value="2">Inclusive</option>
+                                            <option {{ $product->product_tax_type == 1 ? 'selected' : '' }}  value="1">Exclude PPN</option>
+                                            <option {{ $product->product_tax_type == 2 ? 'selected' : '' }} value="2">Include PPN</option>
                                         </select>
                                     </div>
                                 </div>

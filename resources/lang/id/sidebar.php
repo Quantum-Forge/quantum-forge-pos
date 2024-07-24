@@ -7,6 +7,7 @@ return [
     'create_product' => 'Buat Produk',
     'all_products' => 'Semua Produk',
     'print_barcode' => 'Cetak Barcode',
+    'adjustment' => 'Penyesuaian',
     'stock_adjustments' => 'Penyesuaian Stok',
     'create_adjustment' => 'Buat Penyesuaian',
     'all_adjustments' => 'Semua Penyesuaian',

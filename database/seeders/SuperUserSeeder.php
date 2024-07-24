@@ -18,8 +18,8 @@ class SuperUserSeeder extends Seeder
     {
         $user = User::create([
             'name' => 'Administrator',
-            'email' => 'super.admin@test.com',
-            'password' => Hash::make(12345678),
+            'email' => 'support@quantumitco.com',
+            'password' => Hash::make('Quantumtico123#'),
             'is_active' => 1
         ]);
 
