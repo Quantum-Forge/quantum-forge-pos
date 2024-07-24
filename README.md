@@ -1,5 +1,10 @@
-# e-pos
- Program Kasir Simple
+<picture>
+    <source srcset="public/images/logo.png"  
+            media="(prefers-color-scheme: dark)">
+    <img src="public/images/logo-dark.png" alt="App Logo">
+</picture>
+
+> **Important Note:** This Project is ready for Production. But use code from production branch only. If you find any bug or have any suggestion please create an Issue.
 
 # Local Installation
 
@@ -13,3 +18,33 @@
 - run `` php artisan storage:link ``
 - run `` php artisan serve ``
 - then visit `` http://localhost:8000 or http://127.0.0.1:8000 ``.
+
+# Production Instalation
+
+- run ``composer install `` 
+- run `` npm install ``
+- run ``npm run build``
+- copy .env.example to .env
+- run `` php artisan key:generate ``
+- set up your database in the .env
+- run `` php artisan migrate --seed ``
+- run `` php artisan storage:link ``
+
+> **Important Note:** "Quantum POS" uses Laravel Snappy Package for PDFs. If you are using Linux then no configuration is needed. But in other Operating Systems please refer to [Laravel Snappy Documentation](https://github.com/barryvdh/laravel-snappy).
+
+## Triangle POS Features
+
+- **Products Management & Barcode Printing**
+- **Stock Management**
+- **Make Quotation & Send Via Email**
+- **Purchase Management**
+- **Sale Management**
+- **Purchase & Sale Return Management**
+- **Expense Management**
+- **Customer & Supplier Management**
+- **User Management (Roles & Permissions)**
+- **Product Multiple Images**
+- **Multiple Currency Settings**
+- **Unit Settings**
+- **System Settings**
+- **Reports**
