@@ -9,8 +9,8 @@
 @section('breadcrumb')
     <ol class="breadcrumb border-0 m-0">
         <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('sidebar.home') }}</a></li>
-        <li class="breadcrumb-item"><a href="{{ route('products.index') }}">Products</a></li>
-        <li class="breadcrumb-item active">Categories</li>
+        <li class="breadcrumb-item"><a href="{{ route('products.index') }}">{{ __('categories.products') }}</a></li>
+        <li class="breadcrumb-item active">{{ __('categories.title') }}</li>
     </ol>
 @endsection
 
@@ -22,8 +22,9 @@
                 <div class="card">
                     <div class="card-body">
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#categoryCreateModal">
-                            Add Category <i class="bi bi-plus"></i>
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#categoryCreateModal">
+                            {{ __('categories.add_category') }} <i class="bi bi-plus"></i>
                         </button>
 
                         <hr>
