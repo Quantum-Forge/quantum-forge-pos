@@ -146,7 +146,7 @@
                                     <div class="form-group">
                                         <label for="product_unit">{{ __('products.create.unit') }} <i
                                                 class="bi bi-question-circle-fill text-info" data-toggle="tooltip"
-                                                data-placement="top" title="{{ __('products.create.qty_text') }}"></i>
+                                                data-placement="top" title="{{ __('products.create.unit_text') }}"></i>
                                             <span class="text-danger">*</span></label>
                                         <select class="form-control" name="product_unit" id="product_unit">
                                             <option value="" selected>{{ __('products.create.select_unit') }}
