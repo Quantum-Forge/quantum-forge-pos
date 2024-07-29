@@ -40,6 +40,7 @@ return [
     'purchases_report' => 'Purchases Report',
     'sales_return_report' => 'Sales Return Report',
     'purchases_return_report' => 'Purchases Return Report',
+    'user' => 'user',
     'user_management' => 'User Management',
     'create_user' => 'Create User',
     'all_users' => 'All Users',
@@ -48,4 +49,7 @@ return [
     'units' => 'Units',
     'currencies' => 'Currencies',
     'system_settings' => 'System Settings',
+    'add' => 'Add',
+    'payment' => 'Payment',
+    'make_sale' => 'Make Sale'
 ];

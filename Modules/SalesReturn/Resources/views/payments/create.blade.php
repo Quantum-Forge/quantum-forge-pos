@@ -5,10 +5,10 @@
 @section('breadcrumb')
     <ol class="breadcrumb border-0 m-0">
         <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('sidebar.home') }}</a></li>
-        <li class="breadcrumb-item"><a href="{{ route('sale-returns.index') }}">Sale Returns</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('sale-returns.index') }}">{{ __('sidebar.sale_returns') }}</a></li>
         <li class="breadcrumb-item"><a href="{{ route('sale-returns.show', $sale_return) }}">{{ $sale_return->reference }}</a>
         </li>
-        <li class="breadcrumb-item active">Add Payment</li>
+        <li class="breadcrumb-item active">{{ __('sidebar.add') }} {{ __('sidebar.payment') }}</li>
     </ol>
 @endsection
 
