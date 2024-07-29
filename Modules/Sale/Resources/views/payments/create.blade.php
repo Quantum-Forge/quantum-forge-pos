@@ -7,7 +7,7 @@
         <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('sidebar.home') }}</a></li>
         <li class="breadcrumb-item"><a href="{{ route('sales.index') }}">Sales</a></li>
         <li class="breadcrumb-item"><a href="{{ route('sales.show', $sale) }}">{{ $sale->reference }}</a></li>
-        <li class="breadcrumb-item active">Add Payment</li>
+        <li class="breadcrumb-item active">{{ __('sidebar.add') }} {{ __('sidebar.payment') }}</li>
     </ol>
 @endsection
 

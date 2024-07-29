@@ -5,9 +5,9 @@
 @section('breadcrumb')
     <ol class="breadcrumb border-0 m-0">
         <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('sidebar.home') }}</a></li>
-        <li class="breadcrumb-item"><a href="{{ route('sales.index') }}">Sales</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('sales.index') }}">{{ __('sidebar.sales') }}</a></li>
         <li class="breadcrumb-item"><a href="{{ route('sales.show', $sale) }}">{{ $sale->reference }}</a></li>
-        <li class="breadcrumb-item active">Edit Payment</li>
+        <li class="breadcrumb-item active">Edit {{ __('sidebar.payment') }}</li>
     </ol>
 @endsection
 

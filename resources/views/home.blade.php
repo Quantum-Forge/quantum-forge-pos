@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', __('sidebar.home'))
+@section('title', 'home')
 
 @section('breadcrumb')
     <ol class="breadcrumb border-0 m-0">
