@@ -33,14 +33,14 @@
                             <div class="form-row">
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label for="reference">Reference <span class="text-danger">*</span></label>
+                                        <label for="reference">{{ __('form.refference') }} <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="reference" required value="{{ $adjustment->getAttributes()['reference'] }}" readonly>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="from-group">
                                         <div class="form-group">
-                                            <label for="date">Date <span class="text-danger">*</span></label>
+                                            <label for="date">{{ __('form.date') }}  <span class="text-danger">*</span></label>
                                             <input type="date" class="form-control" name="date" required value="{{ $adjustment->getAttributes()['date'] }}">
                                         </div>
                                     </div>
@@ -48,7 +48,7 @@
                             </div>
                             <livewire:adjustment.product-table :adjustedProducts="$adjustment->adjustedProducts->toArray()"/>
                             <div class="form-group">
-                                <label for="note">Note (If Needed)</label>
+                                <label for="note">{{ __('form.note') }}</label>
                                 <textarea name="note" id="note" rows="5" class="form-control">
                                     {{ $adjustment->note }}
                                 </textarea>

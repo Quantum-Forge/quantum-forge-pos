@@ -29,14 +29,14 @@
                             <div class="form-row">
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="reference">Reference <span class="text-danger">*</span></label>
+                                        <label for="reference">{{ __('form.refference') }} <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="reference" required value="{{ $purchase_return->reference }}" readonly>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="from-group">
                                         <div class="form-group">
-                                            <label for="supplier_id">Supplier <span class="text-danger">*</span></label>
+                                            <label for="supplier_id">{{ __('form.supplier') }} <span class="text-danger">*</span></label>
                                             <select class="form-control" name="supplier_id" id="supplier_id" required>
                                                 @foreach(\Modules\People\Entities\Supplier::all() as $supplier)
                                                     <option {{ $purchase_return->supplier_id == $supplier->id ? 'selected' : '' }} value="{{ $supplier->id }}">{{ $supplier->supplier_name }}</option>
@@ -48,7 +48,7 @@
                                 <div class="col-lg-4">
                                     <div class="from-group">
                                         <div class="form-group">
-                                            <label for="date">Date <span class="text-danger">*</span></label>
+                                            <label for="date">{{ __('form.date') }}  <span class="text-danger">*</span></label>
                                             <input type="date" class="form-control" name="date" required value="{{ $purchase_return->date }}">
                                         </div>
                                     </div>
@@ -78,14 +78,14 @@
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="paid_amount">Amount Paid <span class="text-danger">*</span></label>
+                                        <label for="paid_amount">{{ __('form.amount_paid') }} <span class="text-danger">*</span></label>
                                         <input id="paid_amount" type="text" class="form-control" name="paid_amount" required value="{{ $purchase_return->paid_amount }}" readonly>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label for="note">Note (If Needed)</label>
+                                <label for="note">{{ __('form.note') }}</label>
                                 <textarea name="note" id="note" rows="5" class="form-control">{{ $purchase_return->note }}</textarea>
                             </div>
 

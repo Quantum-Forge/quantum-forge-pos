@@ -28,7 +28,7 @@
                             <div class="form-row">
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="reference">Reference <span class="text-danger">*</span></label>
+                                        <label for="reference">{{ __('form.refference') }} <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="reference" required readonly
                                             value="PRRN">
                                     </div>
@@ -36,8 +36,9 @@
                                 <div class="col-lg-4">
                                     <div class="from-group">
                                         <div class="form-group">
-                                            <label for="supplier_id">Supplier <span class="text-danger">*</span></label>
+                                            <label for="supplier_id">{{ __('form.supplier') }} <span class="text-danger">*</span></label>
                                             <select class="form-control" name="supplier_id" id="supplier_id" required>
+                                                <option disabled selected>{{ __('form.supplier') }}...</option>
                                                 @foreach (\Modules\People\Entities\Supplier::all() as $supplier)
                                                     <option value="{{ $supplier->id }}">{{ $supplier->supplier_name }}
                                                     </option>
@@ -49,7 +50,7 @@
                                 <div class="col-lg-4">
                                     <div class="from-group">
                                         <div class="form-group">
-                                            <label for="date">Date <span class="text-danger">*</span></label>
+                                            <label for="date">{{ __('form.date') }}  <span class="text-danger">*</span></label>
                                             <input type="date" class="form-control" name="date" required
                                                 value="{{ now()->format('Y-m-d') }}">
                                         </div>
@@ -64,17 +65,16 @@
                                     <div class="form-group">
                                         <label for="status">Status <span class="text-danger">*</span></label>
                                         <select class="form-control" name="status" id="status" required>
-                                            <option value="Pending">Pending</option>
+                                            <option value="Pending">{{ __('form.pending') }}</option>
                                             <option value="Shipped">Shipped</option>
-                                            <option value="Completed">Completed</option>
+                                            <option value="Completed">{{ __('form.completed') }}</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="from-group">
                                         <div class="form-group">
-                                            <label for="payment_method">Payment Method <span
-                                                    class="text-danger">*</span></label>
+                                            <label for="payment_method">{{ __('form.payment_method') }} <span class="text-danger">*</span></label>
                                             <select class="form-control" name="payment_method" id="payment_method" required>
                                                  @foreach (App\Interface\PaymentMethod::getAllPaymentMethod() as $item)
                                         <option value="{{ $item->value}}">{{ $item->displayName() }}</option>
@@ -100,7 +100,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="note">Note (If Needed)</label>
+                                <label for="note">{{ __('form.note') }}</label>
                                 <textarea name="note" id="note" rows="5" class="form-control"></textarea>
                             </div>
 

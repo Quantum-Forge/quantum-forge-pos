@@ -28,14 +28,14 @@
                             <div class="form-row">
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label for="reference">Reference <span class="text-danger">*</span></label>
+                                        <label for="reference">{{ __('form.refference') }} <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="reference" required readonly
                                             value="INV/{{ $sale->reference }}">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label for="date">Date <span class="text-danger">*</span></label>
+                                        <label for="date">{{ __('form.date') }}  <span class="text-danger">*</span></label>
                                         <input type="date" class="form-control" name="date" required
                                             value="{{ now()->format('Y-m-d') }}">
                                     </div>
@@ -67,8 +67,7 @@
                                 <div class="col-lg-4">
                                     <div class="from-group">
                                         <div class="form-group">
-                                            <label for="payment_method">Payment Method <span
-                                                    class="text-danger">*</span></label>
+                                            <label for="payment_method">{{ __('form.payment_method') }} <span class="text-danger">*</span></label>
                                             <select class="form-control" name="payment_method" id="payment_method" required>
                                                  @foreach (App\Interface\PaymentMethod::getAllPaymentMethod() as $item)
                                         <option value="{{ $item->value}}">{{ $item->displayName() }}</option>
