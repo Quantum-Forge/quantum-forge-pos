@@ -35,7 +35,7 @@
                             <div class="form-row">
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label for="total_amount">Total Amount <span
+                                        <label for="total_amount">{{ __('product_cart.total_amount') }} <span
                                                 class="text-danger">*</span></label>
                                         <input id="total_amount" type="text" class="form-control" name="total_amount"
                                             value="{{ $total_with_shipping }}" readonly required>
@@ -43,7 +43,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label for="paid_amount">Received Amount <span
+                                        <label for="paid_amount">{{ __('product_cart.total_received') }} <span
                                                 class="text-danger">*</span></label>
                                         <input id="paid_amount" type="text" class="form-control" name="paid_amount"
                                             value="{{ $total_with_shipping }}" required>
@@ -51,7 +51,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="due_amount">Due Amount <span class="text-danger">*</span></label>
+                                <label for="due_amount">{{ __('product_cart.due_amount') }} <span class="text-danger">*</span></label>
                                 <input id="due_amount" type="text" class="form-control" value="0" readonly>
                             </div>
                             <div class="form-group">
@@ -63,7 +63,7 @@
                                 </select>
                             </div>
                             <div class="form-group mb-3">
-                                <label for="note">Note (If Needed)</label>
+                                <label for="note">{{ __('product_cart.note') }}</label>
                                 <textarea name="note" id="note" rows="5" class="form-control"></textarea>
                             </div>
                             <div class="form-check">
@@ -75,7 +75,7 @@
                             <div class="table-responsive">
                                 <table class="table table-striped">
                                     <tr>
-                                        <th>Total Products</th>
+                                        <th>{{ __('product_cart.total_products') }}</th>
                                         <td>
                                             <span class="badge badge-success">
                                                 {{ Cart::instance($cart_instance)->count() }}
@@ -83,15 +83,15 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>Order Tax ({{ $global_tax }}%)</th>
+                                        <th>{{ __('product_cart.tax') }} ({{ $global_tax }}%)</th>
                                         <td>(+) {{ format_currency(Cart::instance($cart_instance)->tax()) }}</td>
                                     </tr>
                                     <tr>
-                                        <th>Discount ({{ $global_discount }}%)</th>
+                                        <th>{{ __('product_cart.discount') }} ({{ $global_discount }}%)</th>
                                         <td>(-) {{ format_currency(Cart::instance($cart_instance)->discount()) }}</td>
                                     </tr>
                                     <tr>
-                                        <th>Shipping</th>
+                                        <th>{{ __('product_cart.shipping') }}</th>
                                         <input type="hidden" value="{{ $shipping }}" name="shipping_amount">
                                         <td>(+) {{ format_currency($shipping) }}</td>
                                     </tr>

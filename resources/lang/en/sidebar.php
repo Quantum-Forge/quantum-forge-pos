@@ -7,6 +7,7 @@ return [
     'create_product' => 'Create Product',
     'all_products' => 'All Products',
     'print_barcode' => 'Print Barcode',
+    'adjustment' => 'Adjustment',
     'stock_adjustments' => 'Stock Adjustments',
     'create_adjustment' => 'Create Adjustment',
     'all_adjustments' => 'All Adjustments',
@@ -39,6 +40,7 @@ return [
     'purchases_report' => 'Purchases Report',
     'sales_return_report' => 'Sales Return Report',
     'purchases_return_report' => 'Purchases Return Report',
+    'user' => 'user',
     'user_management' => 'User Management',
     'create_user' => 'Create User',
     'all_users' => 'All Users',
@@ -47,4 +49,7 @@ return [
     'units' => 'Units',
     'currencies' => 'Currencies',
     'system_settings' => 'System Settings',
+    'add' => 'Add',
+    'payment' => 'Payment',
+    'make_sale' => 'Make Sale'
 ];

@@ -8,7 +8,7 @@
 
 @section('breadcrumb')
     <ol class="breadcrumb border-0 m-0">
-        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('sidebar.home') }}</a></li>
         <li class="breadcrumb-item active">Profile</li>
     </ol>
 @endsection
@@ -18,8 +18,8 @@
         <div class="row">
             <div class="col-12">
                 @include('utils.alerts')
-                <h3>Hello, <span class="text-primary">{{ auth()->user()->name }}</span></h3>
-                <p class="font-italic">Change your profile information & password from here...</p>
+                <h3>{{ __('profile.intro') }}, <span class="text-primary">{{ auth()->user()->name }}</span></h3>
+                <p class="font-italic">{{ __('profile.sub_header') }}</p>
             </div>
             <div class="col-lg-6">
                 <div class="card">
@@ -29,13 +29,13 @@
                             @method('patch')
 
                             <div class="form-group">
-                                <label for="image">Profile Image <span class="text-danger">*</span></label>
+                                <label for="image"> {{ __('profile.photo_profile') }} <span class="text-danger">*</span></label>
                                 <img style="width: 100px;height: 100px;" class="d-block mx-auto img-thumbnail img-fluid rounded-circle mb-2" src="{{ auth()->user()->getFirstMediaUrl('avatars') }}" alt="Profile Image">
                                 <input id="image" type="file" name="image" data-max-file-size="500KB">
                             </div>
 
                             <div class="form-group">
-                                <label for="name">Name <span class="text-danger">*</span></label>
+                                <label for="name">{{ __('profile.name') }} <span class="text-danger">*</span></label>
                                 <input class="form-control" type="text" name="name" required value="{{ auth()->user()->name }}">
                                 @error('name')
                                 <p class="text-danger">{{ $message }}</p>
@@ -62,21 +62,21 @@
                             @csrf
                             @method('patch')
                             <div class="form-group">
-                                <label for="current_password">Current Password <span class="text-danger">*</span></label>
+                                <label for="current_password">{{ __('profile.current_pass') }} <span class="text-danger">*</span></label>
                                 <input type="password" class="form-control" name="current_password" required>
                                 @error('current_password')
                                 <p class="text-danger">{{ $message }}</p>
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label for="password">New Password <span class="text-danger">*</span></label>
+                                <label for="password">{{ __('profile.new_pass') }} <span class="text-danger">*</span></label>
                                 <input class="form-control" type="password" name="password" required>
                                 @error('password')
                                 <p class="text-danger">{{ $message }}</p>
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label for="password_confirmation">Confirm Password <span class="text-danger">*</span></label>
+                                <label for="password_confirmation">{{ __('profile.conf_pass') }} <span class="text-danger">*</span></label>
                                 <input class="form-control" type="password" name="password_confirmation" required>
                                 @error('password_confirmation')
                                 <p class="text-danger">{{ $message }}</p>

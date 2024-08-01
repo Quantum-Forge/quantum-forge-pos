@@ -1,8 +1,9 @@
 @php
     $category_max_id = \Modules\Product\Entities\Category::max('id') + 1;
-    $category_code = "CA_" . str_pad($category_max_id, 2, '0', STR_PAD_LEFT)
+    $category_code = 'CA_' . str_pad($category_max_id, 2, '0', STR_PAD_LEFT);
 @endphp
-<div class="modal fade" id="categoryCreateModal" tabindex="-1" role="dialog" aria-labelledby="categoryCreateModal" aria-hidden="true">
+<div class="modal fade" id="categoryCreateModal" tabindex="-1" role="dialog" aria-labelledby="categoryCreateModal"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -16,7 +17,8 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="category_code">Category Code <span class="text-danger">*</span></label>
-                        <input class="form-control" type="text" name="category_code" required value="{{ $category_code }}">
+                        <input class="form-control" type="text" name="category_code" required
+                            value="{{ $category_code }}">
                     </div>
                     <div class="form-group">
                         <label for="category_name">Category Name <span class="text-danger">*</span></label>

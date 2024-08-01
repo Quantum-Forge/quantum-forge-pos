@@ -74,7 +74,7 @@
                 <tr>
                     <td colspan="7" class="text-center">
                         <span class="text-danger">
-                            Please search & select products!
+                            {{ __('product_cart.search_select_products') }}
                         </span>
                     </td>
                 </tr>

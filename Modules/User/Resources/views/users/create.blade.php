@@ -10,9 +10,8 @@
 
 @section('breadcrumb')
     <ol class="breadcrumb border-0 m-0">
-        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-        <li class="breadcrumb-item"><a href="{{ route('users.index') }}">Users</a></li>
-        <li class="breadcrumb-item active">Create</li>
+        <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('sidebar.home') }}</a></li>
+        <li class="breadcrumb-item active"><a href="{{ route('users.index') }}">{{ __('sidebar.user') }}</a></li>
     </ol>
 @endsection
 

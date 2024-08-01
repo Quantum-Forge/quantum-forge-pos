@@ -7,6 +7,7 @@ return [
     'create_product' => 'Buat Produk',
     'all_products' => 'Semua Produk',
     'print_barcode' => 'Cetak Barcode',
+    'adjustment' => 'Penyesuaian',
     'stock_adjustments' => 'Penyesuaian Stok',
     'create_adjustment' => 'Buat Penyesuaian',
     'all_adjustments' => 'Semua Penyesuaian',
@@ -39,6 +40,7 @@ return [
     'purchases_report' => 'Laporan Pembelian',
     'sales_return_report' => 'Laporan Retur Penjualan',
     'purchases_return_report' => 'Laporan Retur Pembelian',
+    'user' => 'Pengguna',
     'user_management' => 'Manajemen Pengguna',
     'create_user' => 'Buat Pengguna',
     'all_users' => 'Semua Pengguna',
@@ -47,4 +49,7 @@ return [
     'units' => 'Satuan',
     'currencies' => 'Mata Uang',
     'system_settings' => 'Pengaturan Sistem',
+    'add' => 'Tambah',
+    'payment' => 'Pembayaran',
+    'make_sale' => 'Buat Penjualan'
 ];

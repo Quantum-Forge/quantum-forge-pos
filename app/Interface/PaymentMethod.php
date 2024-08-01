@@ -4,15 +4,21 @@ namespace App\Interface;
 
 enum PaymentMethodEnum: string
 {
-    case Cash = 'Cash';
-    case CreditCard = 'Credit Card';
-    case Debit = 'Debit';
-    case QRIS = 'QRIS';
-    case Other = 'Other';
+    case Cash = 'form.cash';
+    case CreditCard = 'form.credit_card';
+    case DebitCard = 'form.debit_card';
+    case BankTransfer = 'form.bank_transfer';
+    case OVO = 'form.e_wallet.ovo';
+    case GoPay = 'form.e_wallet.gopay';
+    case Dana = 'form.e_wallet.dana';
+    case LinkAja = 'form.e_wallet.linkaja';
+    case ShopeePay = 'form.e_wallet.shopeepay';
+    case QRCode = 'form.qr_code';
+    case Cheque = 'form.cheque';
 
     public function displayName(): string
     {
-        return $this->value;
+        return __($this->value);
     }
 }
 
@@ -23,9 +29,15 @@ class PaymentMethod
         return [
             PaymentMethodEnum::Cash,
             PaymentMethodEnum::CreditCard,
-            PaymentMethodEnum::Debit,
-            PaymentMethodEnum::QRIS,
-            PaymentMethodEnum::Other,
+            PaymentMethodEnum::DebitCard,
+            PaymentMethodEnum::BankTransfer,
+            PaymentMethodEnum::OVO,
+            PaymentMethodEnum::GoPay,
+            PaymentMethodEnum::Dana,
+            PaymentMethodEnum::LinkAja,
+            PaymentMethodEnum::ShopeePay,
+            PaymentMethodEnum::QRCode,
+            PaymentMethodEnum::Cheque,
         ];
     }
 

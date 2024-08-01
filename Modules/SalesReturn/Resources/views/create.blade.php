@@ -4,9 +4,9 @@
 
 @section('breadcrumb')
     <ol class="breadcrumb border-0 m-0">
-        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-        <li class="breadcrumb-item"><a href="{{ route('sale-returns.index') }}">Sale Returns</a></li>
-        <li class="breadcrumb-item active">Add</li>
+        <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('sidebar.home') }}</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('sale-returns.index') }}">{{ __('sidebar.sale_returns') }}</a></li>
+        <li class="breadcrumb-item active">{{ __('sidebar.add') }}</li>
     </ol>
 @endsection
 
@@ -29,7 +29,7 @@
                             <div class="form-row">
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="reference">Reference <span class="text-danger">*</span></label>
+                                        <label for="reference">{{ __('form.refference') }} <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="reference" required readonly
                                             value="SLRN">
                                     </div>
@@ -37,7 +37,7 @@
                                 <div class="col-lg-4">
                                     <div class="from-group">
                                         <div class="form-group">
-                                            <label for="customer_id">Customer <span class="text-danger">*</span></label>
+                                            <label for="customer_id">{{ __('form.customer') }} <span class="text-danger">*</span></label>
                                             <select class="form-control" name="customer_id" id="customer_id" required>
                                                 @foreach (\Modules\People\Entities\Customer::all() as $customer)
                                                     <option value="{{ $customer->id }}">{{ $customer->customer_name }}
@@ -50,7 +50,7 @@
                                 <div class="col-lg-4">
                                     <div class="from-group">
                                         <div class="form-group">
-                                            <label for="date">Date <span class="text-danger">*</span></label>
+                                            <label for="date">{{ __('form.date') }}  <span class="text-danger">*</span></label>
                                             <input type="date" class="form-control" name="date" required
                                                 value="{{ now()->format('Y-m-d') }}">
                                         </div>
@@ -65,17 +65,16 @@
                                     <div class="form-group">
                                         <label for="status">Status <span class="text-danger">*</span></label>
                                         <select class="form-control" name="status" id="status" required>
-                                            <option value="Pending">Pending</option>
+                                            <option value="Pending">{{ __('form.pending') }}</option>
                                             <option value="Shipped">Shipped</option>
-                                            <option value="Completed">Completed</option>
+                                            <option value="Completed">{{ __('form.completed') }}</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="from-group">
                                         <div class="form-group">
-                                            <label for="payment_method">Payment Method <span
-                                                    class="text-danger">*</span></label>
+                                            <label for="payment_method">{{ __('form.payment_method') }} <span class="text-danger">*</span></label>
                                             <select class="form-control" name="payment_method" id="payment_method" required>
                                                  @foreach (App\Interface\PaymentMethod::getAllPaymentMethod() as $item)
                                         <option value="{{ $item->value}}">{{ $item->displayName() }}</option>
@@ -101,7 +100,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="note">Note (If Needed)</label>
+                                <label for="note">{{ __('form.note') }}</label>
                                 <textarea name="note" id="note" rows="5" class="form-control"></textarea>
                             </div>
 

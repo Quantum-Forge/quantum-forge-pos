@@ -27,7 +27,7 @@
                                 <div class="form-group">
                                     <label>Supplier</label>
                                     <select wire:model="supplier_id" class="form-control" name="supplier_id">
-                                        <option value="">Select Supplier</option>
+                                        <option disabled selected>{{ __('form.supplier') }}...</option>
                                         @foreach($suppliers as $supplier)
                                             <option value="{{ $supplier->id }}">{{ $supplier->supplier_name }}</option>
                                         @endforeach
@@ -41,9 +41,9 @@
                                     <label>Status</label>
                                     <select wire:model="purchase_return_status" class="form-control" name="purchase_return_status">
                                         <option value="">Select Status</option>
-                                        <option value="Pending">Pending</option>
+                                        <option value="Pending">{{ __('form.pending') }}</option>
                                         <option value="Shipped">Shipped</option>
-                                        <option value="Completed">Completed</option>
+                                        <option value="Completed">{{ __('form.completed') }}</option>
                                     </select>
                                 </div>
                             </div>
