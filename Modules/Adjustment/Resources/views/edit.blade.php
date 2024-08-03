@@ -10,7 +10,7 @@
     <ol class="breadcrumb border-0 m-0">
         <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('sidebar.home') }}</a></li>
         <li class="breadcrumb-item"><a href="{{ route('adjustments.index') }}">{{ __('sidebar.adjustment') }}</a></li>
-        <li class="breadcrumb-item active">Edit</li>
+        <li class="breadcrumb-item active">{{ __('adjustment.edit') }}</li>
     </ol>
 @endsection
 
@@ -18,7 +18,7 @@
     <div class="container-fluid mb-4">
         <div class="row">
             <div class="col-12">
-                <livewire:search-product/>
+                <livewire:search-product />
             </div>
         </div>
 
@@ -33,20 +33,24 @@
                             <div class="form-row">
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label for="reference">{{ __('form.refference') }} <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" name="reference" required value="{{ $adjustment->getAttributes()['reference'] }}" readonly>
+                                        <label for="reference">{{ __('form.refference') }} <span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" name="reference" required
+                                            value="{{ $adjustment->getAttributes()['reference'] }}" readonly>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="from-group">
                                         <div class="form-group">
-                                            <label for="date">{{ __('form.date') }}  <span class="text-danger">*</span></label>
-                                            <input type="date" class="form-control" name="date" required value="{{ $adjustment->getAttributes()['date'] }}">
+                                            <label for="date">{{ __('form.date') }} <span
+                                                    class="text-danger">*</span></label>
+                                            <input type="date" class="form-control" name="date" required
+                                                value="{{ $adjustment->getAttributes()['date'] }}">
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <livewire:adjustment.product-table :adjustedProducts="$adjustment->adjustedProducts->toArray()"/>
+                            <livewire:adjustment.product-table :adjustedProducts="$adjustment->adjustedProducts->toArray()" />
                             <div class="form-group">
                                 <label for="note">{{ __('form.note') }}</label>
                                 <textarea name="note" id="note" rows="5" class="form-control">
@@ -55,7 +59,7 @@
                             </div>
                             <div class="mt-3">
                                 <button type="submit" class="btn btn-primary">
-                                    Update Adjustment <i class="bi bi-check"></i>
+                                    {{ __('adjustment.update_adjustment') }} <i class="bi bi-check"></i>
                                 </button>
                             </div>
                         </form>
