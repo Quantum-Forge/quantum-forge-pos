@@ -7,7 +7,7 @@
         <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('sidebar.home') }}</a></li>
         <li class="breadcrumb-item"><a href="{{ route('purchases.index') }}">{{ __('sidebar.purchases') }}</a></li>
         <li class="breadcrumb-item"><a href="{{ route('purchases.show', $purchase) }}">{{ $purchase->reference }}</a></li>
-        <li class="breadcrumb-item active">Edit {{ __('sidebar.payment') }}</li>
+        <li class="breadcrumb-item active">{{ __('purchase.edit') }} {{ __('sidebar.payment') }}</li>
     </ol>
 @endsection
 
@@ -20,7 +20,8 @@
                 <div class="col-lg-12">
                     @include('utils.alerts')
                     <div class="form-group">
-                        <button class="btn btn-primary">Update Payment <i class="bi bi-check"></i></button>
+                        <button class="btn btn-primary">{{ __('purchase.update_payment') }} <i
+                                class="bi bi-check"></i></button>
                     </div>
                 </div>
                 <div class="col-lg-12">
@@ -29,14 +30,18 @@
                             <div class="form-row">
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label for="reference">{{ __('form.refference') }} <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" name="reference" required readonly value="{{ $purchasePayment->reference }}">
+                                        <label for="reference">{{ __('form.refference') }} <span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" name="reference" required readonly
+                                            value="{{ $purchasePayment->reference }}">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label for="date">{{ __('form.date') }}  <span class="text-danger">*</span></label>
-                                        <input type="date" class="form-control" name="date" required value="{{ $purchasePayment->getAttributes()['date'] }}">
+                                        <label for="date">{{ __('form.date') }} <span
+                                                class="text-danger">*</span></label>
+                                        <input type="date" class="form-control" name="date" required
+                                            value="{{ $purchasePayment->getAttributes()['date'] }}">
                                     </div>
                                 </div>
                             </div>
@@ -44,15 +49,19 @@
                             <div class="form-row">
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="due_amount">Due Amount <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" name="due_amount" required value="{{ format_currency($purchase->due_amount) }}" readonly>
+                                        <label for="due_amount">{{ __('purchase.due_amount') }} <span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" name="due_amount" required
+                                            value="{{ format_currency($purchase->due_amount) }}" readonly>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="amount">Amount <span class="text-danger">*</span></label>
+                                        <label for="amount">{{ __('purchase.amount') }} <span
+                                                class="text-danger">*</span></label>
                                         <div class="input-group">
-                                            <input id="amount" type="text" class="form-control" name="amount" required value="{{ old('amount') ?? $purchasePayment->amount }}">
+                                            <input id="amount" type="text" class="form-control" name="amount"
+                                                required value="{{ old('amount') ?? $purchasePayment->amount }}">
                                             <div class="input-group-append">
                                                 <button id="getTotalAmount" class="btn btn-primary" type="button">
                                                     <i class="bi bi-check-square"></i>
@@ -64,10 +73,14 @@
                                 <div class="col-lg-4">
                                     <div class="from-group">
                                         <div class="form-group">
-                                            <label for="payment_method">{{ __('product_cart.payment_method') }}<span class="text-danger">*</span></label>
+                                            <label for="payment_method">{{ __('product_cart.payment_method') }}<span
+                                                    class="text-danger">*</span></label>
                                             <select class="form-control" name="payment_method" id="payment_method" required>
                                                 @foreach (App\Interface\PaymentMethod::getAllPaymentMethod() as $item)
-                                                    <option {{ $purchasePayment->payment_method == $item->displayName() ? 'selected' : '' }} value="{{ $item->displayName() }}">{{ $item->displayName() }}</option>
+                                                    <option
+                                                        {{ $purchasePayment->payment_method == $item->displayName() ? 'selected' : '' }}
+                                                        value="{{ $item->displayName() }}">{{ $item->displayName() }}
+                                                    </option>
                                                 @endforeach
                                             </select>
                                         </div>
@@ -76,7 +89,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="note">Note</label>
+                                <label for="note">{{ __('purchase.note') }}</label>
                                 <textarea class="form-control" rows="4" name="note">{{ old('note') ?? $purchasePayment->note }}</textarea>
                             </div>
 
@@ -92,25 +105,24 @@
 @push('page_scripts')
     <script src="{{ asset('js/jquery-mask-money.js') }}"></script>
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             $('#amount').maskMoney({
-                prefix:'{{ settings()->currency->symbol }}',
-                thousands:'{{ settings()->currency->thousand_separator }}',
-                decimal:'{{ settings()->currency->decimal_separator }}',
+                prefix: '{{ settings()->currency->symbol }}',
+                thousands: '{{ settings()->currency->thousand_separator }}',
+                decimal: '{{ settings()->currency->decimal_separator }}',
                 precision: 0,
             });
 
             $('#amount').maskMoney('mask');
 
-            $('#getTotalAmount').click(function () {
+            $('#getTotalAmount').click(function() {
                 $('#amount').maskMoney('mask', {{ $purchase->due_amount }});
             });
 
-            $('#payment-form').submit(function () {
+            $('#payment-form').submit(function() {
                 var amount = $('#amount').val().replace(/[^\d]/g, '');
                 $('#amount').val(amount);
             });
         });
     </script>
 @endpush
-

@@ -12,7 +12,8 @@ use Yajra\DataTables\Services\DataTable;
 class PurchaseDataTable extends DataTable
 {
 
-    public function dataTable($query) {
+    public function dataTable($query)
+    {
         return datatables()
             ->eloquent($query)
             ->addColumn('total_amount', function ($data) {
@@ -35,11 +36,13 @@ class PurchaseDataTable extends DataTable
             });
     }
 
-    public function query(Purchase $model) {
+    public function query(Purchase $model)
+    {
         return $model->newQuery();
     }
 
-    public function html() {
+    public function html()
+    {
         return $this->builder()
             ->setTableId('purchases-table')
             ->columns($this->getColumns())
@@ -60,33 +63,40 @@ class PurchaseDataTable extends DataTable
             );
     }
 
-    protected function getColumns() {
+    protected function getColumns()
+    {
         return [
-            Column::make('reference')
+            Column::make('reference')->title(__('purchase.reference'))
                 ->className('text-center align-middle'),
 
             Column::make('supplier_name')
-                ->title('Supplier')
+                ->title(__('purchase.supplier'))
                 ->className('text-center align-middle'),
 
             Column::computed('status')
+                ->title(__('purchase.status'))
                 ->className('text-center align-middle'),
 
             Column::computed('total_amount')
+                ->title(__('purchase.total_amount'))
                 ->className('text-center align-middle'),
 
             Column::computed('paid_amount')
+                ->title(__('purchase.paid_amount'))
                 ->className('text-center align-middle'),
 
             Column::computed('due_amount')
+                ->title(__('purchase.due_amount'))
                 ->className('text-center align-middle'),
 
             Column::computed('payment_status')
+                ->title(__('purchase.payment_status'))
                 ->className('text-center align-middle'),
 
             Column::computed('action')
                 ->exportable(false)
                 ->printable(false)
+                ->title(__('purchase.action'))
                 ->className('text-center align-middle'),
 
             Column::make('created_at')
@@ -94,7 +104,8 @@ class PurchaseDataTable extends DataTable
         ];
     }
 
-    protected function filename(): string {
+    protected function filename(): string
+    {
         return 'Purchase_' . date('YmdHis');
     }
 }

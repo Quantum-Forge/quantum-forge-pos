@@ -29,7 +29,8 @@
                             <div class="form-row">
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="reference">{{ __('form.refference') }} <span class="text-danger">*</span></label>
+                                        <label for="reference">{{ __('form.refference') }} <span
+                                                class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="reference" required readonly
                                             value="SL">
                                     </div>
@@ -37,7 +38,8 @@
                                 <div class="col-lg-4">
                                     <div class="from-group">
                                         <div class="form-group">
-                                            <label for="customer_id">{{ __('form.customer') }} <span class="text-danger">*</span></label>
+                                            <label for="customer_id">{{ __('form.customer') }} <span
+                                                    class="text-danger">*</span></label>
                                             <select class="form-control" name="customer_id" id="customer_id" required>
                                                 @foreach (\Modules\People\Entities\Customer::all() as $customer)
                                                     <option {{ $sale->customer_id == $customer->id ? 'selected' : '' }}
@@ -50,7 +52,8 @@
                                 <div class="col-lg-4">
                                     <div class="from-group">
                                         <div class="form-group">
-                                            <label for="date">{{ __('form.date') }}  <span class="text-danger">*</span></label>
+                                            <label for="date">{{ __('form.date') }} <span
+                                                    class="text-danger">*</span></label>
                                             <input type="date" class="form-control" name="date" required
                                                 value="{{ now()->format('Y-m-d') }}">
                                         </div>
@@ -63,10 +66,11 @@
                             <div class="form-row">
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="status">Status <span class="text-danger">*</span></label>
+                                        <label for="status">{{ __('quotation.status') }} <span
+                                                class="text-danger">*</span></label>
                                         <select class="form-control" name="status" id="status" required>
                                             <option value="Pending">{{ __('form.pending') }}</option>
-                                            <option value="Shipped">Shipped</option>
+                                            <option value="Shipped">{{ __('quotation.shipped') }}</option>
                                             <option value="Completed">{{ __('form.completed') }}</option>
                                         </select>
                                     </div>
@@ -74,7 +78,8 @@
                                 <div class="col-lg-4">
                                     <div class="from-group">
                                         <div class="form-group">
-                                            <label for="payment_method">{{ __('form.payment_method') }} <span class="text-danger">*</span></label>
+                                            <label for="payment_method">{{ __('form.payment_method') }} <span
+                                                    class="text-danger">*</span></label>
                                             <select class="form-control" name="payment_method" id="payment_method" required>
                                                  @foreach (App\Interface\PaymentMethod::getAllPaymentMethod() as $item)
                                         <option value="{{ $item->displayName() }}">{{ $item->displayName() }}</option>
@@ -85,7 +90,8 @@
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="paid_amount">Amount Received <span class="text-danger">*</span></label>
+                                        <label for="paid_amount">{{ __('quotation.amount_received') }} <span
+                                                class="text-danger">*</span></label>
                                         <div class="input-group">
                                             <input id="paid_amount" type="text" class="form-control" name="paid_amount"
                                                 required>
@@ -108,7 +114,7 @@
 
                             <div class="mt-3">
                                 <button type="submit" class="btn btn-primary">
-                                    Create Sale <i class="bi bi-check"></i>
+                                    {{ __('quotation.create_sale') }} <i class="bi bi-check"></i>
                                 </button>
                             </div>
                         </form>
