@@ -29,7 +29,7 @@
                             <div class="form-row">
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label for="reference">{{ __('form.refference') }} <span
+                                        <label for="reference">{{ __('form.reference') }} <span
                                                 class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="reference" required readonly
                                             value="INV/{{ $purchase->reference }}">
@@ -75,10 +75,9 @@
                                             <label for="payment_method">{{ __('form.payment_method') }} <span
                                                     class="text-danger">*</span></label>
                                             <select class="form-control" name="payment_method" id="payment_method" required>
-                                                @foreach (App\Interface\PaymentMethod::getAllPaymentMethod() as $item)
-                                                    <option value="{{ $item->value }}">{{ $item->displayName() }}
-                                                    </option>
-                                                @endforeach
+                                                 @foreach (App\Interface\PaymentMethod::getAllPaymentMethod() as $item)
+                                        <option value="{{ $item->displayName() }}">{{ $item->displayName() }}</option>
+                                    @endforeach
                                             </select>
                                         </div>
                                     </div>

@@ -5,7 +5,7 @@
 @section('breadcrumb')
     <ol class="breadcrumb border-0 m-0">
         <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('sidebar.home') }}</a></li>
-        <li class="breadcrumb-item"><a href="{{ route('purchases.index') }}">{{ __('sidebar.pruchases') }}</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('purchases.index') }}">{{ __('sidebar.purchases') }}</a></li>
         <li class="breadcrumb-item"><a href="{{ route('purchases.show', $purchase) }}">{{ $purchase->reference }}</a></li>
         <li class="breadcrumb-item active">{{ __('purchase.edit') }} {{ __('sidebar.payment') }}</li>
     </ol>
@@ -30,7 +30,7 @@
                             <div class="form-row">
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label for="reference">{{ __('form.refference') }} <span
+                                        <label for="reference">{{ __('form.reference') }} <span
                                                 class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="reference" required readonly
                                             value="{{ $purchasePayment->reference }}">
