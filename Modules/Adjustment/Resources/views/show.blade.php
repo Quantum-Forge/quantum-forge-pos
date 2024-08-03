@@ -10,7 +10,7 @@
     <ol class="breadcrumb border-0 m-0">
         <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('sidebar.home') }}</a></li>
         <li class="breadcrumb-item"><a href="{{ route('adjustments.index') }}">{{ __('sidebar.adjustment') }}</a></li>
-        <li class="breadcrumb-item active">Details</li>
+        <li class="breadcrumb-item active">{{ __('adjustment.details') }}</li>
     </ol>
 @endsection
 
@@ -24,10 +24,10 @@
                             <table class="table table-bordered">
                                 <tr>
                                     <th colspan="2">
-                                        Date
+                                        {{ __('adjustment.date') }}
                                     </th>
                                     <th colspan="2">
-                                        Reference
+                                        {{ __('adjustment.reference') }}
                                     </th>
                                 </tr>
                                 <tr>
@@ -40,22 +40,24 @@
                                 </tr>
 
                                 <tr>
-                                    <th>Product Name</th>
-                                    <th>Code</th>
-                                    <th>Quantity</th>
-                                    <th>Type</th>
+                                    <th>{{ __('adjustment.product_name') }}</th>
+                                    <th>{{ __('adjustment.code') }}</th>
+                                    <th>{{ __('adjustment.quantity') }}</th>
+                                    <th>{{ __('adjustment.type') }}</th>
                                 </tr>
 
-                                @foreach($adjustment->adjustedProducts as $adjustedProduct)
+                                @foreach ($adjustment->adjustedProducts as $adjustedProduct)
                                     <tr>
                                         <td>{{ $adjustedProduct->product->product_name }}</td>
                                         <td>{{ $adjustedProduct->product->product_code }}</td>
                                         <td>{{ $adjustedProduct->quantity }}</td>
                                         <td>
-                                            @if($adjustedProduct->type == 'add')
-                                                (+) Addition
+                                            @if ($adjustedProduct->type == 'add')
+                                                (+)
+                                                {{ __('adjustment.addition') }}
                                             @else
-                                                (-) Subtraction
+                                                (-)
+                                                {{ __('adjustment.subtraction') }}
                                             @endif
                                         </td>
                                     </tr>
