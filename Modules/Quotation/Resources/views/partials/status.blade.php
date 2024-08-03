@@ -1,9 +1,10 @@
 @if ($data->status == 'Pending')
     <span class="badge badge-info">
-        {{ $data->status }}
+        {{ __('form.pending') }}
     </span>
 @else
     <span class="badge badge-success">
-        {{ $data->status }}
+        {{ __('form.completed') }}
     </span>
 @endif
+
