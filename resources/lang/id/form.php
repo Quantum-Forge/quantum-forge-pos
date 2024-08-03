@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'refference' => 'Referensi',
+    'reference' => 'Referensi',
     'customer' => 'Pelanggan',
     'supplier' => 'Pemasok',
     'date' => 'Tanggal',

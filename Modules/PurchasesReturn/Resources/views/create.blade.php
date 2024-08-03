@@ -28,7 +28,7 @@
                             <div class="form-row">
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="reference">{{ __('form.refference') }} <span class="text-danger">*</span></label>
+                                        <label for="reference">{{ __('form.reference') }} <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="reference" required readonly
                                             value="PRRN">
                                     </div>
