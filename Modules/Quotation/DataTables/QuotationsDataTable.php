@@ -12,7 +12,8 @@ use Yajra\DataTables\Services\DataTable;
 class QuotationsDataTable extends DataTable
 {
 
-    public function dataTable($query) {
+    public function dataTable($query)
+    {
         return datatables()
             ->eloquent($query)
             ->addColumn('total_amount', function ($data) {
@@ -26,11 +27,13 @@ class QuotationsDataTable extends DataTable
             });
     }
 
-    public function query(Quotation $model) {
+    public function query(Quotation $model)
+    {
         return $model->newQuery();
     }
 
-    public function html() {
+    public function html()
+    {
         return $this->builder()
             ->setTableId('sales-table')
             ->columns($this->getColumns())
@@ -51,27 +54,31 @@ class QuotationsDataTable extends DataTable
             );
     }
 
-    protected function getColumns() {
+    protected function getColumns()
+    {
         return [
-            Column::make('date')
+            Column::make('date')->title(__('quotation.date'))
                 ->className('text-center align-middle'),
 
-            Column::make('reference')
+            Column::make('reference')->title(__('quotation.reference'))
                 ->className('text-center align-middle'),
 
             Column::make('customer_name')
-                ->title('Customer')
+                ->title(__('quotation.customer'))
                 ->className('text-center align-middle'),
 
             Column::computed('status')
+                ->title(__('quotation.status'))
                 ->className('text-center align-middle'),
 
             Column::computed('total_amount')
+                ->title(__('quotation.total_amount'))
                 ->className('text-center align-middle'),
 
             Column::computed('action')
                 ->exportable(false)
                 ->printable(false)
+                ->title(__('quotation.action'))
                 ->className('text-center align-middle'),
 
             Column::make('created_at')
@@ -79,7 +86,8 @@ class QuotationsDataTable extends DataTable
         ];
     }
 
-    protected function filename(): string {
+    protected function filename(): string
+    {
         return 'Quotations_' . date('YmdHis');
     }
 }
