@@ -7,7 +7,7 @@ return [
     'total_amount' => 'Jumlah Total',
     'paid_amount' => 'Jumlah Dibayar',
     'due_amount' => 'Jumlah Kekurangan',
-    'action' => 'Tindakan',
+    'action' => 'Aksi',
     'status' => 'Status',
     'edit' => 'Edit',
     'amount_received' => 'Jumlah Diterima',
@@ -44,4 +44,7 @@ return [
     'add_payment' => 'Tambahan Baru',
     'delete' => 'Hapus',
     'delete_text' => 'Anda yakin ingin menghapus data ini? Ini akan menghapus data secara permanen!',
+    'purchase_deleted' => 'Pembelian Dihapus!',
+    'purchase_updated' => 'Pembelian Diperbarui!',
+    'purchase_created' => 'Pembelian Dibuat!'
 ];

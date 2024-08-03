@@ -9,16 +9,15 @@
             </a>
         @endcan
         @can('access_purchase_payments')
-            @if ($data->due_amount > 0)
+            @if($data->due_amount > 0)
                 <a href="{{ route('purchase-payments.create', $data->id) }}" class="dropdown-item">
-                    <i class="bi bi-plus-circle-dotted mr-2 text-success" style="line-height: 1;"></i>
-                    {{ __('purchase.add_payment') }}
+                    <i class="bi bi-plus-circle-dotted mr-2 text-success" style="line-height: 1;"></i> {{ __('purchase.add_payment') }}
                 </a>
             @endif
         @endcan
         @can('edit_purchases')
             <a href="{{ route('purchases.edit', $data->id) }}" class="dropdown-item">
-                <i class="bi bi-pencil mr-2 text-primary" style="line-height: 1;"></i> {{ __('purchase.edit') }}
+                <i class="bi bi-pencil mr-2 text-primary" style="line-height: 1;"></i> Edit
             </a>
         @endcan
         @can('show_purchases')
@@ -27,15 +26,13 @@
             </a>
         @endcan
         @can('delete_purchases')
-            <button id="delete" class="dropdown-item"
-                onclick="
+            <button id="delete" class="dropdown-item" onclick="
                 event.preventDefault();
-                if (confirm('Are you sure? It will delete the data permanently!')) {
+                if (confirm(' {{ __('purchase.delete_text') }}')) {
                 document.getElementById('destroy{{ $data->id }}').submit()
                 }">
                 <i class="bi bi-trash mr-2 text-danger" style="line-height: 1;"></i> {{ __('purchase.delete') }}
-                <form id="destroy{{ $data->id }}" class="d-none" action="{{ route('purchases.destroy', $data->id) }}"
-                    method="POST">
+                <form id="destroy{{ $data->id }}" class="d-none" action="{{ route('purchases.destroy', $data->id) }}" method="POST">
                     @csrf
                     @method('delete')
                 </form>
