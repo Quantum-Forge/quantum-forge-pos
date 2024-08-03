@@ -11,7 +11,8 @@ use Yajra\DataTables\Services\DataTable;
 
 class PurchasePaymentsDataTable extends DataTable
 {
-    public function dataTable($query) {
+    public function dataTable($query)
+    {
         return datatables()
             ->eloquent($query)
             ->addColumn('amount', function ($data) {
@@ -22,11 +23,13 @@ class PurchasePaymentsDataTable extends DataTable
             });
     }
 
-    public function query(PurchasePayment $model) {
+    public function query(PurchasePayment $model)
+    {
         return $model->newQuery()->byPurchase()->with('purchase');
     }
 
-    public function html() {
+    public function html()
+    {
         return $this->builder()
             ->setTableId('purchase-payments-table')
             ->columns($this->getColumns())
@@ -47,21 +50,27 @@ class PurchasePaymentsDataTable extends DataTable
             );
     }
 
-    protected function getColumns() {
+    protected function getColumns()
+    {
         return [
             Column::make('date')
+                ->title(__('purchase.date'))
                 ->className('align-middle text-center'),
 
             Column::make('reference')
+                ->title(__('purchase.reference'))
                 ->className('align-middle text-center'),
 
             Column::computed('amount')
+                ->title(__('purchase.amount'))
                 ->className('align-middle text-center'),
 
             Column::make('payment_method')
+                ->title(__('purchase.payment_method'))
                 ->className('align-middle text-center'),
 
             Column::computed('action')
+                ->title(__('purchase.action'))
                 ->exportable(false)
                 ->printable(false)
                 ->className('align-middle text-center'),
@@ -71,7 +80,8 @@ class PurchasePaymentsDataTable extends DataTable
         ];
     }
 
-    protected function filename(): string {
+    protected function filename(): string
+    {
         return 'PurchasePayments_' . date('YmdHis');
     }
 }
