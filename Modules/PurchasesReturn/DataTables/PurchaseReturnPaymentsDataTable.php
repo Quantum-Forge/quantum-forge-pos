@@ -12,7 +12,8 @@ use Yajra\DataTables\Services\DataTable;
 class PurchaseReturnPaymentsDataTable extends DataTable
 {
 
-    public function dataTable($query) {
+    public function dataTable($query)
+    {
         return datatables()
             ->eloquent($query)
             ->addColumn('amount', function ($data) {
@@ -23,11 +24,13 @@ class PurchaseReturnPaymentsDataTable extends DataTable
             });
     }
 
-    public function query(PurchaseReturnPayment $model) {
+    public function query(PurchaseReturnPayment $model)
+    {
         return $model->newQuery()->byPurchaseReturn()->with('purchaseReturn');
     }
 
-    public function html() {
+    public function html()
+    {
         return $this->builder()
             ->setTableId('purchase-payments-table')
             ->columns($this->getColumns())
@@ -48,23 +51,25 @@ class PurchaseReturnPaymentsDataTable extends DataTable
             );
     }
 
-    protected function getColumns() {
+    protected function getColumns()
+    {
         return [
-            Column::make('date')
+            Column::make('date')->title(__('purchase_return.date'))
                 ->className('align-middle text-center'),
 
-            Column::make('reference')
+            Column::make('reference')->title(__('purchase_return.reference'))
                 ->className('align-middle text-center'),
 
-            Column::computed('amount')
+            Column::computed('amount')->title(__('purchase_return.amount'))
                 ->className('align-middle text-center'),
 
-            Column::make('payment_method')
+            Column::make('payment_method')->title(__('purchase_return.payment_method'))
                 ->className('align-middle text-center'),
 
             Column::computed('action')
                 ->exportable(false)
                 ->printable(false)
+                ->title(__('purchase_return.action'))
                 ->className('align-middle text-center'),
 
             Column::make('created_at')
@@ -72,7 +77,8 @@ class PurchaseReturnPaymentsDataTable extends DataTable
         ];
     }
 
-    protected function filename(): string {
+    protected function filename(): string
+    {
         return 'PurchaseReturnPayments_' . date('YmdHis');
     }
 }

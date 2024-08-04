@@ -20,7 +20,7 @@
                 <div class="card">
                     <div class="card-body">
                         <a href="{{ route('purchase-returns.create') }}" class="btn btn-primary">
-                            Add Purchase Return <i class="bi bi-plus"></i>
+                            {{ __('purchase_return.add_purchase_return') }} <i class="bi bi-plus"></i>
                         </a>
 
                         <hr>

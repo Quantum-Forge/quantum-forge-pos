@@ -12,7 +12,8 @@ use Yajra\DataTables\Services\DataTable;
 class PurchaseReturnsDataTable extends DataTable
 {
 
-    public function dataTable($query) {
+    public function dataTable($query)
+    {
         return datatables()
             ->eloquent($query)
             ->addColumn('total_amount', function ($data) {
@@ -35,11 +36,13 @@ class PurchaseReturnsDataTable extends DataTable
             });
     }
 
-    public function query(PurchaseReturn $model) {
+    public function query(PurchaseReturn $model)
+    {
         return $model->newQuery();
     }
 
-    public function html() {
+    public function html()
+    {
         return $this->builder()
             ->setTableId('purchase-returns-table')
             ->columns($this->getColumns())
@@ -60,33 +63,38 @@ class PurchaseReturnsDataTable extends DataTable
             );
     }
 
-    protected function getColumns() {
+    protected function getColumns()
+    {
         return [
-            Column::make('reference')
+            Column::make('reference')->title(__('purchase_return.reference'))
                 ->className('text-center align-middle'),
 
             Column::make('supplier_name')
-                ->title('Supplier')
+                ->title(__('purchase_return.supplier_name'))
                 ->className('text-center align-middle'),
 
-            Column::computed('status')
+            Column::computed('status')->title(__('form.status'))
                 ->className('text-center align-middle'),
 
             Column::computed('total_amount')
+                ->title(__('purchase_return.total_amount'))
                 ->className('text-center align-middle'),
 
             Column::computed('paid_amount')
+                ->title(__('purchase_return.paid_amount'))
                 ->className('text-center align-middle'),
 
-            Column::computed('due_amount')
+            Column::computed('due_amount')->title(__('purchase_return.due_amount'))
                 ->className('text-center align-middle'),
 
             Column::computed('payment_status')
+                ->title(__('purchase_return.payment_status'))
                 ->className('text-center align-middle'),
 
             Column::computed('action')
                 ->exportable(false)
                 ->printable(false)
+                ->title(__('purchase_return.action'))
                 ->className('text-center align-middle'),
 
             Column::make('created_at')
@@ -94,7 +102,8 @@ class PurchaseReturnsDataTable extends DataTable
         ];
     }
 
-    protected function filename(): string {
+    protected function filename(): string
+    {
         return 'PurchaseReturns_' . date('YmdHis');
     }
 }

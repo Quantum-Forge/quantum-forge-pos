@@ -8,7 +8,9 @@ return [
     'note' => 'Note',
     'payment_method' => 'Payment Method',
     'amount_paid' => 'Amount Paid',
+    'status' => 'Status',
     'pending' => 'Pending',
+    'shipped' => 'Shipped',
     'ordered' => 'Ordered',
     'completed' => 'Completed',
     'unpaid' => 'Unpaid',
@@ -27,5 +29,5 @@ return [
     ],
     'qr_code' => 'QR Code',
     'cheque' => 'Cheque',
-   'create_purchase' => 'Create Purchase'
+    'create_purchase' => 'Create Purchase'
 ];
