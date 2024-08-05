@@ -42,7 +42,7 @@
                                     <select wire:model="purchase_return_status" class="form-control" name="purchase_return_status">
                                         <option value="">Select Status</option>
                                         <option value="Pending">{{ __('form.pending') }}</option>
-                                        <option value="Shipped">Shipped</option>
+                                        <option value="Shipped">{{ __('form.shipped') }}</option>
                                         <option value="Completed">{{ __('form.completed') }}</option>
                                     </select>
                                 </div>

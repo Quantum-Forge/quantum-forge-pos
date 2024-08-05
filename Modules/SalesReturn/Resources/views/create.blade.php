@@ -66,7 +66,7 @@
                                         <label for="status">Status <span class="text-danger">*</span></label>
                                         <select class="form-control" name="status" id="status" required>
                                             <option value="Pending">{{ __('form.pending') }}</option>
-                                            <option value="Shipped">Shipped</option>
+                                            <option value="Shipped">{{ __('form.shipped') }}</option>
                                             <option value="Completed">{{ __('form.completed') }}</option>
                                         </select>
                                     </div>
@@ -106,7 +106,7 @@
 
                             <div class="mt-3">
                                 <button type="submit" class="btn btn-primary">
-                                    Create Sale Return <i class="bi bi-check"></i>
+                                    {{ __('sidebar.create_sale_return') }} <i class="bi bi-check"></i>
                                 </button>
                             </div>
                         </form>

@@ -29,5 +29,4 @@ return [
     ],
     'qr_code' => 'QR Code',
     'cheque' => 'Cheque',
-    'create_purchase' => 'Create Purchase'
 ];

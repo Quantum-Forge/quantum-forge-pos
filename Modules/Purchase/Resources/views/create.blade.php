@@ -113,7 +113,7 @@
 
                             <div class="mt-3">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('form.create_purchase') }} <i class="bi bi-check"></i>
+                                    {{ __('sidebar.create_purchase') }} <i class="bi bi-check"></i>
                                 </button>
                             </div>
                         </form>

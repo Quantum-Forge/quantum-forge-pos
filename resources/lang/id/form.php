@@ -29,5 +29,5 @@ return [
     ],
     'qr_code' => 'QR Code',
     'cheque' => 'Cek',
-    'create_purchase' => 'Buat Pembelian'
+   
 ];

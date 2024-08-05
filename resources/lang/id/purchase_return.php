@@ -34,11 +34,9 @@ return [
     'show_payments' => 'Lihat Pembyaran',
     'add_payment' => 'Tambah Pembyaran',
     'delete' => 'Hapus',
-    'date' => 'Tanggal',
     'payment_method' => 'Metode Pembyaran',
     'action' => 'Tindakan',
     'supplier_name' => 'Nama Supplier',
     'total_amount' => 'Jumlah Total',
-    'paid_amount' => 'Jumlah Dibayarkan',
-    'payment_status' => 'Status Pembyaran',
+    'paid_amount' => 'Jumlah Dibayarkan'
 ];

@@ -34,11 +34,9 @@ return [
     'show_payments' => 'Show Payments',
     'add_payment' => 'Add Payment',
     'delete' => 'Delete',
-    'date' => 'Date',
     'payment_method' => 'Payment Method',
     'action' => 'Action',
     'supplier_name' => 'Supplier Name',
     'total_amount' => 'Total Amount',
     'paid_amount' => 'Paid Amount',
-    'payment_status' => 'Payment Status',
 ];
