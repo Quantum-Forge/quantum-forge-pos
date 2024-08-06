@@ -15,37 +15,37 @@
             <div style="text-align: center;margin-bottom: 25px;">
                 <img width="180" src="{{ public_path('images/logo-dark.png') }}" alt="Logo">
                 <h4 style="margin-bottom: 20px;">
-                    <span>Reference::</span> <strong>{{ $sale->reference }}</strong>
+                    <span>{{ __('sales.reference') }}::</span> <strong>{{ $sale->reference }}</strong>
                 </h4>
             </div>
             <div class="card">
                 <div class="card-body">
                     <div class="row mb-4">
                         <div class="col-xs-4 mb-3 mb-md-0">
-                            <h4 class="mb-2" style="border-bottom: 1px solid #dddddd;padding-bottom: 10px;">Company Info:</h4>
+                            <h4 class="mb-2" style="border-bottom: 1px solid #dddddd;padding-bottom: 10px;">{{ __('sales.company_info') }}:</h4>
                             <div><strong>{{ settings()->company_name }}</strong></div>
                             <div>{{ settings()->company_address }}</div>
                             <div>Email: {{ settings()->company_email }}</div>
-                            <div>Phone: {{ settings()->company_phone }}</div>
+                            <div>{{ __('sales.phone') }}: {{ settings()->company_phone }}</div>
                         </div>
 
                         <div class="col-xs-4 mb-3 mb-md-0">
-                            <h4 class="mb-2" style="border-bottom: 1px solid #dddddd;padding-bottom: 10px;">Customer Info:</h4>
+                            <h4 class="mb-2" style="border-bottom: 1px solid #dddddd;padding-bottom: 10px;">{{ __('sales.customer_info') }}:</h4>
                             <div><strong>{{ $customer->customer_name }}</strong></div>
                             <div>{{ $customer->address }}</div>
                             <div>Email: {{ $customer->customer_email }}</div>
-                            <div>Phone: {{ $customer->customer_phone }}</div>
+                            <div>{{ __('sales.phone') }}: {{ $customer->customer_phone }}</div>
                         </div>
 
                         <div class="col-xs-4 mb-3 mb-md-0">
-                            <h4 class="mb-2" style="border-bottom: 1px solid #dddddd;padding-bottom: 10px;">Invoice Info:</h4>
-                            <div>Invoice: <strong>INV/{{ $sale->reference }}</strong></div>
-                            <div>Date: {{ \Carbon\Carbon::parse($sale->date)->format('d M, Y') }}</div>
+                            <h4 class="mb-2" style="border-bottom: 1px solid #dddddd;padding-bottom: 10px;">{{ __('sales.invoice_info') }}:</h4>
+                            <div>{{ __('sales.invoice') }}: <strong>INV/{{ $sale->reference }}</strong></div>
+                            <div>{{ __('sales.date') }}: {{ \Carbon\Carbon::parse($sale->date)->format('d M, Y') }}</div>
                             <div>
-                                Status: <strong>{{ $sale->status }}</strong>
+                                {{ __('sales.status') }}: <strong>{{ $sale->status }}</strong>
                             </div>
                             <div>
-                                Payment Status: <strong>{{ $sale->payment_status }}</strong>
+                                {{ __('sales.payment_status') }}: <strong>{{ $sale->payment_status }}</strong>
                             </div>
                         </div>
 
@@ -55,12 +55,12 @@
                         <table class="table table-striped">
                             <thead>
                             <tr>
-                                <th class="align-middle">Product</th>
-                                <th class="align-middle">Net Unit Price</th>
-                                <th class="align-middle">Quantity</th>
-                                <th class="align-middle">Discount</th>
-                                <th class="align-middle">Tax</th>
-                                <th class="align-middle">Sub Total</th>
+                                <th class="align-middle">{{ __('sales.product') }}</th>
+                                <th class="align-middle">{{ __('sales.net_unit_price') }}</th>
+                                <th class="align-middle">{{ __('sales.quantity') }}</th>
+                                <th class="align-middle">{{ __('sales.discount') }}</th>
+                                <th class="align-middle">{{ __('sales.tax') }}</th>
+                                <th class="align-middle">{{ __('sales.sub_total') }}</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -100,15 +100,15 @@
                             <table class="table">
                                 <tbody>
                                 <tr>
-                                    <td class="left"><strong>Discount ({{ $sale->discount_percentage }}%)</strong></td>
+                                    <td class="left"><strong>{{ __('sales.discount') }} ({{ $sale->discount_percentage }}%)</strong></td>
                                     <td class="right">{{ format_currency($sale->discount_amount) }}</td>
                                 </tr>
                                 <tr>
-                                    <td class="left"><strong>Tax ({{ $sale->tax_percentage }}%)</strong></td>
+                                    <td class="left"><strong>{{ __('sales.tax') }} ({{ $sale->tax_percentage }}%)</strong></td>
                                     <td class="right">{{ format_currency($sale->tax_amount) }}</td>
                                 </tr>
                                 <tr>
-                                    <td class="left"><strong>Shipping</strong></td>
+                                    <td class="left"><strong>{{ __('sales.shipping') }}</strong></td>
                                     <td class="right">{{ format_currency($sale->shipping_amount) }}</td>
                                 </tr>
                                 <tr>

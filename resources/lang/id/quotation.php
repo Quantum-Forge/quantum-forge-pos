@@ -7,7 +7,7 @@ return [
     'customer' => 'Pelanggan',
     'status' => 'Status',
     'total_amount' => 'Jumlah Total',
-    'action' => 'Action',
+    'action' => 'Aksi',
     'quotations' => 'Penawaran',
     'quotation' => 'Penawaran',
     'quotation_details' => 'Detail Penawaran',

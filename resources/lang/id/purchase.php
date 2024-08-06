@@ -38,7 +38,7 @@ return [
     'note' => 'Catatan',
     'create_payment' => 'Buat Pembayaran',
     'show_payments' => 'Lihat Pembayaran',
-    'add_payment' => 'Tambahan Baru',
+    'add_payment' => 'Tambah Pembayaran',
     'delete' => 'Hapus',
     'delete_text' => 'Anda yakin ingin menghapus data ini? Ini akan menghapus data secara permanen!',
     'purchase_deleted' => 'Pembelian Dihapus!',

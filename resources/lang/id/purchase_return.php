@@ -35,7 +35,7 @@ return [
     'add_payment' => 'Tambah Pembyaran',
     'delete' => 'Hapus',
     'payment_method' => 'Metode Pembyaran',
-    'action' => 'Tindakan',
+    'action' => 'Aksi',
     'supplier_name' => 'Nama Supplier',
     'total_amount' => 'Jumlah Total',
     'paid_amount' => 'Jumlah Dibayarkan'

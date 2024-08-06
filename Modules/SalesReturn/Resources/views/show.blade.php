@@ -29,7 +29,7 @@
                     <div class="card-body">
                         <div class="row mb-4">
                             <div class="col-sm-4 mb-3 mb-md-0">
-                                <h5 class="mb-2 border-bottom pb-2">Company Info:</h5>
+                                <h5 class="mb-2 border-bottom pb-2">{{ __('sales.company_info') }}:</h5>
                                 <div><strong>{{ settings()->company_name }}</strong></div>
                                 <div>{{ settings()->company_address }}</div>
                                 <div>Email: {{ settings()->company_email }}</div>
@@ -37,7 +37,7 @@
                             </div>
 
                             <div class="col-sm-4 mb-3 mb-md-0">
-                                <h5 class="mb-2 border-bottom pb-2">Customer Info:</h5>
+                                <h5 class="mb-2 border-bottom pb-2">{{ __('sales.customer_info') }}:</h5>
                                 <div><strong>{{ $customer->customer_name }}</strong></div>
                                 <div>{{ $customer->address }}</div>
                                 <div>Email: {{ $customer->customer_email }}</div>
@@ -45,7 +45,7 @@
                             </div>
 
                             <div class="col-sm-4 mb-3 mb-md-0">
-                                <h5 class="mb-2 border-bottom pb-2">Invoice Info:</h5>
+                                <h5 class="mb-2 border-bottom pb-2">{{ __('sales.invoice_info') }}:</h5>
                                 <div>Invoice: <strong>INV/{{ $sale_return->reference }}</strong></div>
                                 <div>Date: {{ \Carbon\Carbon::parse($sale_return->date)->format('d M, Y') }}</div>
                                 <div>

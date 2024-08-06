@@ -62,29 +62,29 @@ class SalesDataTable extends DataTable
 
     protected function getColumns() {
         return [
-            Column::make('reference')
+            Column::make('reference')->title(__('sales.reference'))
                 ->className('text-center align-middle'),
 
             Column::make('customer_name')
-                ->title('Customer')
+                ->title(__('sales.customer'))
                 ->className('text-center align-middle'),
 
-            Column::computed('status')
+            Column::computed('status')->title(__('sales.status'))
                 ->className('text-center align-middle'),
 
-            Column::computed('total_amount')
+            Column::computed('total_amount')->title(__('sales.total_amount'))
                 ->className('text-center align-middle'),
 
-            Column::computed('paid_amount')
+            Column::computed('paid_amount')->title(__('sales.paid_amount'))
                 ->className('text-center align-middle'),
 
-            Column::computed('due_amount')
+            Column::computed('due_amount')->title(__('sales.due_amount'))
                 ->className('text-center align-middle'),
 
-            Column::computed('payment_status')
+            Column::computed('payment_status')->title(__('sales.payment_status'))
                 ->className('text-center align-middle'),
 
-            Column::computed('action')
+            Column::computed('action')->title(__('sales.action'))
                 ->exportable(false)
                 ->printable(false)
                 ->className('text-center align-middle'),

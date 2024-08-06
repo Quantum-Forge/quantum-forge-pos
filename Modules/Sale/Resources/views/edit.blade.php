@@ -62,9 +62,9 @@
                                     <div class="form-group">
                                         <label for="status">Status <span class="text-danger">*</span></label>
                                         <select class="form-control" name="status" id="status" required>
-                                            <option {{ $sale->status == 'Pending' ? 'selected' : '' }} value="Pending">Pending</option>
-                                            <option {{ $sale->status == 'Shipped' ? 'selected' : '' }} value="Shipped">Shipped</option>
-                                            <option {{ $sale->status == 'Completed' ? 'selected' : '' }} value="Completed">Completed</option>
+                                            <option {{ $sale->status == 'Pending' ? 'selected' : '' }} value="Pending">{{ __('form.pending') }}</option>
+                                            <option {{ $sale->status == 'Shipped' ? 'selected' : '' }} value="Shipped">{{ __('form.shipped') }}</option>
+                                            <option {{ $sale->status == 'Completed' ? 'selected' : '' }} value="Completed">{{ __('form.completed') }}</option>
                                         </select>
                                     </div>
                                 </div>
@@ -91,7 +91,7 @@
 
                             <div class="mt-3">
                                 <button type="submit" class="btn btn-primary">
-                                    Update Sale <i class="bi bi-check"></i>
+                                    {{ __('sales.update_sales') }} <i class="bi bi-check"></i>
                                 </button>
                             </div>
                         </form>
