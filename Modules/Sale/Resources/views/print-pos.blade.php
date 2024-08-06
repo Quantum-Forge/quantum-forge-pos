@@ -109,10 +109,14 @@
             <tbody>
                 <tr style="background-color:#ddd;">
                     <td class="centered" style="padding: 5px;">
-                        {{ __('sales.payment_status') }}: {{ $sale->payment_method }}
+                        {{ __('sales.payment_method') }}:
+                        <br> 
+                        <b>{{ $sale->payment_method }}</b>
                     </td>
                     <td class="centered" style="padding: 5px;">
-                        {{ __('sales.amount') }}: {{ format_currency($sale->paid_amount) }}
+                        {{ __('sales.paid_amount') }}: 
+                        <br>
+                        <b>{{ format_currency($sale->paid_amount) }}</b>
                     </td>
                 </tr>
                 <tr style="border-bottom: 0;">
