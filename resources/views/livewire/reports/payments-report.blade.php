@@ -7,7 +7,7 @@
                         <div class="form-row">
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label>Start Date <span class="text-danger">*</span></label>
+                                    <label>{{ __('reports.payment_report.start_date') }} <span class="text-danger">*</span></label>
                                     <input wire:model="start_date" type="date" class="form-control" name="start_date">
                                     @error('start_date')
                                         <span class="text-danger mt-1">{{ $message }}</span>
@@ -16,7 +16,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label>End Date <span class="text-danger">*</span></label>
+                                    <label>{{ __('reports.payment_report.end_date') }} <span class="text-danger">*</span></label>
                                     <input wire:model="end_date" type="date" class="form-control" name="end_date">
                                     @error('end_date')
                                         <span class="text-danger mt-1">{{ $message }}</span>
@@ -27,13 +27,13 @@
                         <div class="form-row">
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label>Payments</label>
+                                    <label>{{ __('reports.payment_report.payment') }}</label>
                                     <select wire:model.live="payments" class="form-control" name="payments">
-                                        <option value="">Select Payments</option>
-                                        <option value="sale">Sales</option>
-                                        <option value="sale_return">Sale Returns</option>
-                                        <option value="purchase">Purchase</option>
-                                        <option value="purchase_return">Purchase Returns</option>
+                                        <option>{{ __('reports.payment_report.select_payment') }}...</option>
+                                        <option value="sale">{{ __('reports.payment_report.sale') }}</option>
+                                        <option value="sale_return">{{ __('reports.payment_report.sale_return') }}</option>
+                                        <option value="purchase">{{ __('reports.payment_report.purchase') }}</option>
+                                        <option value="purchase_return">{{ __('reports.payment_report.purchase_return') }}</option>
                                     </select>
                                     @error('payments')
                                         <span class="text-danger mt-1">{{ $message }}</span>
@@ -42,11 +42,11 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label>Payment Method</label>
+                                    <label>{{ __('reports.payment_report.payment_method') }}</label>
                                     <select wire:model="payment_method" class="form-control" name="payment_method">
-                                        <option value="">Select Payment Method</option>
+                                        <option>{{ __('reports.payment_report.select_payment') }}...</option>
                                         @foreach (App\Interface\PaymentMethod::getAllPaymentMethod() as $item)
-                                            <option value="{{ $item->name }}">{{ $item->name }}</option>
+                                            <option value="{{ $item->displayName() }}">{{ $item->displayName() }}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -56,8 +56,8 @@
                             <button type="submit" class="btn btn-primary">
                                 <span wire:target="generateReport" wire:loading class="spinner-border spinner-border-sm"
                                     role="status" aria-hidden="true"></span>
-                                <i wire:target="generateReport" wire:loading.remove class="bi bi-shuffle"></i>
-                                Filter Report
+                                <i wire:target="generateReport" wire:loading.remove class="bi bi-shuffle mr-1"></i>
+                                {{ __('reports.payment_report.filter_report') }}
                             </button>
                         </div>
                     </form>
@@ -81,11 +81,11 @@
                             </div>
                             <thead>
                                 <tr>
-                                    <th>Date</th>
-                                    <th>Reference</th>
-                                    <th>{{ ucwords(str_replace('_', ' ', $payments)) }}</th>
+                                    <th>{{ __('reports.payment_report.date') }}</th>
+                                    <th>{{ __('reports.payment_report.reference') }}</th>
+                                    <th>{{ __('reports.payment_report.' . $payments) }}</th>
                                     <th>Total</th>
-                                    <th>Payment Method</th>
+                                    <th>{{ __('reports.payment_report.payment_method') }}</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -129,7 +129,7 @@
                 <div class="card border-0 shadow-sm">
                     <div class="card-body">
                         <div class="alert alert-warning mb-0">
-                            No Data Available!
+                            {{ __('reports.payment_report.no_data') }}
                         </div>
                     </div>
                 </div>

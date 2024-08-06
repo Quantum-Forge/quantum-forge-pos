@@ -15,6 +15,21 @@ return [
         'end_date' => 'End Date',
         'filter_report' => 'Filter Report'
     ],
+    'payment_report' => [
+        'start_date' => 'Start Date',
+        'end_date' => 'End Date',
+        'filter_report' => 'Filter Report',
+        'payment_method' => 'Payment Method',
+        'payment' => 'Payment',
+        'select_payment' => 'Select Payment',
+        'sale' => 'Sales',
+        'sale_return' => 'Sales Return',
+        'purchase' => 'Purchase',
+        'purchase_return' => 'Purchase Return',
+        'no_data' => 'No Data!',
+        'date' => 'Date',
+        'reference' => 'Reference',
+    ],
    
     
 ];

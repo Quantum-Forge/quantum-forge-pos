@@ -15,6 +15,21 @@ return [
         'end_date' => 'Tanggal Berakhir',
         'filter_report' => 'Filter Laporan'
     ],
+    'payment_report' => [
+        'start_date' => 'Tanggal Mulai',
+        'end_date' => 'Tanggal Berakhir',
+        'filter_report' => 'Filter Laporan',
+        'payment_method' => 'Metode Pembayaran',
+        'payment' => 'Pembayaran',
+        'select_payment' => 'Pilih Pembayaran',
+        'sale' => 'Penjualan',
+        'sale_return' => 'Retur Penjualan',
+        'purchase' => 'Pembelian',
+        'purchase_return' => 'Retur Pembelian',
+        'no_data' => 'Tidak Ada Data !',
+        'date' => 'Tanggal',
+        'reference' => 'Referensi',        
+    ],
    
     
 ];
