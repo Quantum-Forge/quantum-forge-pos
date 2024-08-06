@@ -2,9 +2,9 @@
     <span class="badge badge-info">
         {{ __('form.pending') }}
     </span>
-@elseif ($data->status == 'Ordered')
+@elseif (($data->status == 'Shipped'))
     <span class="badge badge-primary">
-        {{ __('form.ordered') }}
+        {{ __('form.shipped') }}
     </span>
 @else
     <span class="badge badge-success">
