@@ -25,9 +25,9 @@ class UsersDataTable extends DataTable
             })
             ->addColumn('status', function ($data) {
                 if ($data->is_active == 1) {
-                    $html = '<span class="badge badge-success">Active</span>';
+                    $html = '<span class="badge badge-success">' . __('user.update_user.status_opt.active') . '</span>';
                 } else {
-                    $html = '<span class="badge badge-warning">Deactivated</span>';
+                    $html = '<span class="badge badge-warning">' . __('user.update_user.status_opt.deactivate') . '</span>';
                 }
 
                 return $html;
@@ -71,22 +71,22 @@ class UsersDataTable extends DataTable
 
     protected function getColumns() {
         return [
-            Column::computed('image')
+            Column::computed('image')->title(__('user.view_user.images'))
                 ->className('text-center align-middle'),
 
-            Column::make('name')
+            Column::make('name')->title(__('user.view_user.name'))
                 ->className('text-center align-middle'),
 
-            Column::make('email')
+            Column::make('email')->title(__('user.view_user.email'))
                 ->className('text-center align-middle'),
 
-            Column::computed('role')
+            Column::computed('role')->title(__('user.view_user.role'))
                 ->className('text-center align-middle'),
 
             Column::computed('status')
                 ->className('text-center align-middle'),
 
-            Column::computed('action')
+            Column::computed('action')->title(__('user.view_user.action'))
                 ->exportable(false)
                 ->printable(false)
                 ->className('text-center align-middle'),
