@@ -93,8 +93,25 @@ return [
         'Unpaid' => 'Belum Lunas',
         'Paid' => 'Lunas'    
     ],
-
-    
-   
-    
+    'sales_return_report' => [
+        'start_date' => 'Tanggal Mulai',
+        'end_date' => 'Tanggal Berakhir',
+        'customer' => 'Pelanggan',
+        'filter_report' => 'Filter Laporan',
+        'payment_status' => 'Status Pembayaran',
+        'payment' => 'Pembayaran',
+        'select_status' => 'Pilih Status',
+        'select_payment_status' => 'Pilih Status Pembayaran',
+        'no_data' => 'Tidak Ada Data Retur Penjualan !',
+        'date' => 'Tanggal',
+        'reference' => 'Referensi',
+        'paid_th' => 'Terbayarkan',
+        'due' => 'Sisa',
+        'Pending' => 'Menunggu',
+        'Shipped' => 'Dikirim',
+        'Completed' => 'Selesai',
+        'Partial' => 'Parsial',
+        'Unpaid' => 'Belum Lunas',
+        'Paid' => 'Lunas'    
+    ] 
 ];

@@ -7,7 +7,7 @@
                         <div class="form-row">
                             <div class="col-lg-4">
                                 <div class="form-group">
-                                    <label>Start Date <span class="text-danger">*</span></label>
+                                    <label>{{ __('reports.sales_return_report.start_date') }} <span class="text-danger">*</span></label>
                                     <input wire:model="start_date" type="date" class="form-control" name="start_date">
                                     @error('start_date')
                                     <span class="text-danger mt-1">{{ $message }}</span>
@@ -16,7 +16,7 @@
                             </div>
                             <div class="col-lg-4">
                                 <div class="form-group">
-                                    <label>End Date <span class="text-danger">*</span></label>
+                                    <label>{{ __('reports.sales_return_report.end_date') }} <span class="text-danger">*</span></label>
                                     <input wire:model="end_date" type="date" class="form-control" name="end_date">
                                     @error('end_date')
                                     <span class="text-danger mt-1">{{ $message }}</span>
@@ -25,9 +25,9 @@
                             </div>
                             <div class="col-lg-4">
                                 <div class="form-group">
-                                    <label>Customer</label>
+                                    <label>{{ __('reports.sales_return_report.customer') }}</label>
                                     <select wire:model="customer_id" class="form-control" name="customer_id">
-                                        <option value="">Select Customer</option>
+                                        <option value="">{{ __('reports.sales_return_report.customer') }}...</option>
                                         @foreach($customers as $customer)
                                             <option value="{{ $customer->id }}">{{ $customer->customer_name }}</option>
                                         @endforeach
@@ -40,7 +40,7 @@
                                 <div class="form-group">
                                     <label>Status</label>
                                     <select wire:model="sale_return_status" class="form-control" name="sale_return_status">
-                                        <option value="">Select Status</option>
+                                        <option value="">{{ __('reports.sales_return_report.select_status') }}...</option>
                                         <option value="Pending">{{ __('form.pending') }}</option>
                                         <option value="Shipped">{{ __('form.shipped') }}</option>
                                         <option value="Completed">{{ __('form.completed') }}</option>
@@ -51,10 +51,10 @@
                                 <div class="form-group">
                                     <label>Payment Status</label>
                                     <select wire:model="payment_status" class="form-control" name="payment_status">
-                                        <option value="">Select Payment Status</option>
-                                        <option value="Paid">Paid</option>
-                                        <option value="Unpaid">Unpaid</option>
-                                        <option value="Partial">Partial</option>
+                                        <option value="">{{ __('reports.sales_return_report.payment_status') }}...</option>
+                                        <option value="Paid">{{ __('reports.sales_return_report.Paid') }}</option>
+                                        <option value="Unpaid">{{ __('reports.sales_return_report.Unpaid') }}</option>
+                                        <option value="Partial">{{ __('reports.sales_return_report.Partial') }}</option>
                                     </select>
                                 </div>
                             </div>
@@ -62,8 +62,8 @@
                         <div class="form-group mb-0">
                             <button type="submit" class="btn btn-primary">
                                 <span wire:target="generateReport" wire:loading class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                                <i wire:target="generateReport" wire:loading.remove class="bi bi-shuffle"></i>
-                                Filter Report
+                                <i wire:target="generateReport" wire:loading.remove class="bi bi-shuffle mr-1"></i>
+                                {{ __('reports.sales_return_report.filter_report') }}
                             </button>
                         </div>
                     </form>
@@ -84,14 +84,14 @@
                         </div>
                         <thead>
                         <tr>
-                            <th>Date</th>
-                            <th>Reference</th>
-                            <th>Customer</th>
+                            <th>{{ __('reports.sales_return_report.date') }}</th>
+                            <th>{{ __('reports.sales_return_report.reference') }}</th>
+                            <th>{{ __('reports.sales_return_report.customer') }}</th>
                             <th>Status</th>
                             <th>Total</th>
-                            <th>Paid</th>
-                            <th>Due</th>
-                            <th>Payment Status</th>
+                            <th>{{ __('reports.sales_return_report.paid_th') }}</th>
+                            <th>{{ __('reports.sales_return_report.due') }}</th>
+                            <th>{{ __('reports.sales_return_report.payment_status') }}</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -103,15 +103,15 @@
                                 <td>
                                     @if ($sale_return->status == 'Pending')
                                         <span class="badge badge-info">
-                                            {{ $sale_return->status }}
+                                             {{ __('reports.sales_return_report.' . $sale_return->status) }}
                                         </span>
                                             @elseif ($sale_return->status == 'Shipped')
                                                 <span class="badge badge-primary">
-                                            {{ $sale_return->status }}
+                                             {{ __('reports.sales_return_report.' . $sale_return->status) }}
                                         </span>
                                             @else
                                                 <span class="badge badge-success">
-                                            {{ $sale_return->status }}
+                                             {{ __('reports.sales_return_report.' . $sale_return->status) }}
                                         </span>
                                     @endif
                                 </td>
@@ -121,15 +121,15 @@
                                 <td>
                                     @if ($sale_return->payment_status == 'Partial')
                                         <span class="badge badge-warning">
-                                    {{ $sale_return->payment_status }}
+                                     {{ __('reports.sales_return_report.' . $sale_return->payment_status) }}
                                 </span>
                                     @elseif ($sale_return->payment_status == 'Paid')
                                         <span class="badge badge-success">
-                                    {{ $sale_return->payment_status }}
+                                     {{ __('reports.sales_return_report.' . $sale_return->payment_status) }}
                                 </span>
                                     @else
                                         <span class="badge badge-danger">
-                                    {{ $sale_return->payment_status }}
+                                     {{ __('reports.sales_return_report.' . $sale_return->payment_status) }}
                                 </span>
                                     @endif
 
@@ -138,7 +138,7 @@
                         @empty
                             <tr>
                                 <td colspan="8">
-                                    <span class="text-danger">No Sale Return Data Available!</span>
+                                    <span class="text-danger"> {{ __('reports.sales_return_report.no_data') }}</span>
                                 </td>
                             </tr>
                         @endforelse

@@ -93,10 +93,25 @@ return [
         'Unpaid' => 'Unpaid',
         'Paid' => 'Paid'    
     ],
-
-
-
-
-   
-    
+    'sales_return_report' => [
+        'start_date' => 'Start Date',
+        'end_date' => 'End Date',
+        'customer' => 'Customer',
+        'filter_report' => 'Filter Report',
+        'payment_status' => 'Payment Status',
+        'payment' => 'Payment',
+        'select_status' => 'Select Status',
+        'select_payment_status' => 'Select Payment Status',
+        'no_data' => 'No Sales Return Data!',
+        'date' => 'Date',
+        'reference' => 'Reference',
+        'paid_th' => 'Paid',
+        'due' => 'Due',
+        'Pending' => 'Pending',
+        'Shipped' => 'Shipped',
+        'Completed' => 'Completed',
+        'Partial' => 'Partial',
+        'Unpaid' => 'Unpaid',
+        'Paid' => 'Paid'    
+    ] 
 ];
