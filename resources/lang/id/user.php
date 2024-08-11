@@ -36,5 +36,118 @@ return [
         ],
        'action' => 'Aksi'
     ],
+    
+    'role_create' => [
+        'create_role' => 'Buat Peran',
+        'role_name' => 'Nama Peran',
+        'permission' => [
+            'permissions' => 'Izin',
+            'give_all_permission' => 'Berikan Semua Izin',
+            'dashboard' => [
+                'total_stats' => 'Statistik Total',
+                'notifications' => 'Notifikasi',
+                'month_overview' => 'Ikhtisar Bulanan',
+                'weekly_sales_purchases' => 'Penjualan & Pembelian Mingguan',
+                'monthly_cashflow' => 'Arus Kas Bulanan',
+            ],
+            'user_management' => [
+                'access' => 'Akses',
+                'own_profile' => 'Profil Sendiri',
+            ],
+            'products' => [
+                'access' => 'Akses',
+                'view' => 'Lihat',
+                'create' => 'Buat',
+                'edit' => 'Edit',
+                'category' => 'Kategori',
+                'print_barcodes' => 'Cetak Barcode',
+            ],
+            'adjustments' => [
+                'access' => 'Akses',
+                'view' => 'Lihat',
+                'create' => 'Buat',
+                'edit' => 'Edit',
+                'delete' => 'Hapus',
+            ],
+            'quotations' => [
+                'access' => 'Akses',
+                'view' => 'Lihat',
+                'create' => 'Buat',
+                'edit' => 'Edit',
+                'delete' => 'Hapus',
+                'send_email' => 'Kirim Email',
+                'sale_from_quotation' => 'Penjualan dari Penawaran',
+            ],
+            'expenses' => [
+                'access' => 'Akses',
+                'edit' => 'Edit',
+                'delete' => 'Hapus',
+                'category' => 'Kategori',
+            ],
+            'customers' => [
+                'access' => 'Akses',
+                'create' => 'Buat',
+                'edit' => 'Edit',
+                'delete' => 'Hapus',
+            ],
+            'suppliers' => [
+                'access' => 'Akses',
+                'create' => 'Buat',
+                'edit' => 'Edit',
+                'delete' => 'Hapus',
+            ],
+            'sales' => [
+                'access' => 'Akses',
+                'view' => 'Lihat',
+                'create' => 'Buat',
+                'edit' => 'Edit',
+                'delete' => 'Hapus',
+                'payments' => 'Pembayaran',
+                'pos_system' => 'Sistem POS',
+            ],
+            'sale_returns' => [
+                'access' => 'Akses',
+                'view' => 'Lihat',
+                'create' => 'Buat',
+                'edit' => 'Edit',
+                'delete' => 'Hapus',
+                'payments' => 'Pembayaran',
+            ],
+            'purchases' => [
+                'access' => 'Akses',
+                'view' => 'Lihat',
+                'create' => 'Buat',
+                'edit' => 'Edit',
+                'delete' => 'Hapus',
+                'payments' => 'Pembayaran',
+            ],
+            'purchase_returns' => [
+                'access' => 'Akses',
+                'view' => 'Lihat',
+                'create' => 'Buat',
+                'edit' => 'Edit',
+                'delete' => 'Hapus',
+                'payments' => 'Pembayaran',
+            ],
+            'currencies' => [
+                'access' => 'Akses',
+                'edit' => 'Edit',
+                'delete' => 'Hapus',
+            ],
+            'reports' => [
+                'access' => 'Akses',
+            ],
+            'settings' => [
+                'access' => 'Akses',
+            ],
+        ],
+    ],
+
+    'role_view' => [
+        'add_role' => 'Tambah Peran',
+        'name' => 'Nama',
+        'email' => 'Email',
+       'action' => 'Aksi'
+    ],
 
 ];

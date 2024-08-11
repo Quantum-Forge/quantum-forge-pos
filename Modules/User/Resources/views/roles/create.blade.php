@@ -25,52 +25,52 @@
                 <form action="{{ route('roles.store') }}" method="POST">
                     @csrf
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary">Create Role <i class="bi bi-check"></i>
+                        <button type="submit" class="btn btn-primary"> {{ __('user.role_create.create_role') }} <i class="bi bi-check"></i>
                         </button>
                     </div>
                     <div class="card">
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="name">Role Name <span class="text-danger">*</span></label>
+                                <label for="name">{{ __('user.role_create.role_name') }} <span class="text-danger">*</span></label>
                                 <input class="form-control" type="text" name="name" required>
                             </div>
 
                             <hr>
 
                             <div class="form-group">
-                                <label for="permissions">Permissions <span class="text-danger">*</span></label>
+                                <label for="permissions">{{ __('user.role_create.permission.permissions') }} <span class="text-danger">*</span></label>
                             </div>
 
                             <div class="form-group">
                                 <div class="custom-control custom-checkbox">
                                     <input type="checkbox" class="custom-control-input" id="select-all">
-                                    <label class="custom-control-label" for="select-all">Give All Permissions</label>
+                                    <label class="custom-control-label" for="select-all">{{ __('user.role_create.permission.give_all_permission') }}</label>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <!-- Dashboard Permissions -->
-                                <div class="col-lg-4 col-md-6 mb-3">
+                                <div class="col-lg-5 col-md-6 mb-3">
                                     <div class="card h-100 border-0 shadow">
                                         <div class="card-header">
-                                            Dashboard
+                                            {{ __('sidebar.home') }}
                                         </div>
                                         <div class="card-body">
                                             <div class="row">
-                                                <div class="col-6">
+                                                <div class="col-12">
                                                     <div class="custom-control custom-switch">
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="show_total_stats" name="permissions[]"
                                                                value="show_total_stats" {{ old('show_total_stats') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="show_total_stats">Total Stats</label>
+                                                        <label class="custom-control-label" for="show_total_stats">{{ __('user.role_create.permission.dashboard.total_stats') }}</label>
                                                     </div>
                                                 </div>
-                                                <div class="col-6">
+                                                <div class="col-12">
                                                     <div class="custom-control custom-switch">
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="show_notifications" name="permissions[]"
                                                                value="show_notifications" {{ old('show_notifications') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="show_notifications">Notifications</label>
+                                                        <label class="custom-control-label" for="show_notifications">{{ __('user.role_create.permission.dashboard.notifications') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-12">
@@ -78,7 +78,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="show_month_overview" name="permissions[]"
                                                                value="show_month_overview" {{ old('show_month_overview') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="show_month_overview">Month Overview</label>
+                                                        <label class="custom-control-label" for="show_month_overview">{{ __('user.role_create.permission.dashboard.name') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-12">
@@ -86,7 +86,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="show_weekly_sales_purchases" name="permissions[]"
                                                                value="show_weekly_sales_purchases" {{ old('show_weekly_sales_purchases') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="show_weekly_sales_purchases">Weekly Sales & Purchases</label>
+                                                        <label class="custom-control-label" for="show_weekly_sales_purchases">{{ __('user.role_create.permission.dashboard.weekly_sales_purchases') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-12">
@@ -94,7 +94,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="show_monthly_cashflow" name="permissions[]"
                                                                value="show_monthly_cashflow" {{ old('show_monthly_cashflow') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="show_monthly_cashflow">Monthly Cashflow</label>
+                                                        <label class="custom-control-label" for="show_monthly_cashflow">{{ __('user.role_create.permission.dashboard.monthly_cashflow') }}</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -103,27 +103,27 @@
                                 </div>
 
                                 <!-- User Management Permission -->
-                                <div class="col-lg-4 col-md-6 mb-3">
+                                <div class="col-lg-3 col-md-6 mb-3">
                                     <div class="card h-100 border-0 shadow">
                                         <div class="card-header">
-                                            User Mangement
+                                            {{ __('sidebar.user_management') }}
                                         </div>
                                         <div class="card-body">
                                             <div class="row">
-                                                <div class="col-6">
+                                                <div class="col-12">
                                                     <div class="custom-control custom-switch">
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="access_user_management" name="permissions[]"
                                                                value="access_user_management" {{ old('access_user_management') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="access_user_management">Access</label>
+                                                        <label class="custom-control-label" for="access_user_management"> {{ __('user.role_create.permission.user_management.access') }}</label>
                                                     </div>
                                                 </div>
-                                                <div class="col-6">
+                                                <div class="col-12">
                                                     <div class="custom-control custom-switch">
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="edit_own_profile" name="permissions[]"
                                                                value="edit_own_profile" {{ old('edit_own_profile') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="edit_own_profile">Own Profile</label>
+                                                        <label class="custom-control-label" for="edit_own_profile"> {{ __('user.role_create.permission.user_management.own_profile') }}</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -135,7 +135,7 @@
                                 <div class="col-lg-4 col-md-6 mb-3">
                                     <div class="card h-100 border-0 shadow">
                                         <div class="card-header">
-                                            Products
+                                            {{ __('sidebar.products') }}
                                         </div>
                                         <div class="card-body">
                                             <div class="row">
@@ -204,7 +204,7 @@
                                 <div class="col-lg-4 col-md-6 mb-3">
                                     <div class="card h-100 border-0 shadow">
                                         <div class="card-header">
-                                            Adjustments
+                                            {{ __('sidebar.adjustment') }}
                                         </div>
                                         <div class="card-body">
                                             <div class="row">
@@ -257,7 +257,7 @@
                                 <div class="col-lg-4 col-md-6 mb-3">
                                     <div class="card h-100 border-0 shadow">
                                         <div class="card-header">
-                                            Quotaions
+                                            {{ __('sidebar.quotations') }}
                                         </div>
                                         <div class="card-body">
                                             <div class="row">
@@ -326,7 +326,7 @@
                                 <div class="col-lg-4 col-md-6 mb-3">
                                     <div class="card h-100 border-0 shadow">
                                         <div class="card-header">
-                                            Expenses
+                                            {{ __('sidebar.expenses') }}
                                         </div>
                                         <div class="card-body">
                                             <div class="row">
@@ -379,7 +379,7 @@
                                 <div class="col-lg-4 col-md-6 mb-3">
                                     <div class="card h-100 border-0 shadow">
                                         <div class="card-header">
-                                            Customers
+                                            {{ __('sidebar.customers') }}
                                         </div>
                                         <div class="card-body">
                                             <div class="row">
@@ -432,7 +432,7 @@
                                 <div class="col-lg-4 col-md-6 mb-3">
                                     <div class="card h-100 border-0 shadow">
                                         <div class="card-header">
-                                            Suppliers
+                                            {{ __('sidebar.suppliers') }}
                                         </div>
                                         <div class="card-body">
                                             <div class="row">
@@ -485,7 +485,7 @@
                                 <div class="col-lg-4 col-md-6 mb-3">
                                     <div class="card h-100 border-0 shadow">
                                         <div class="card-header">
-                                            Sales
+                                            {{ __('sidebar.sales') }}
                                         </div>
                                         <div class="card-body">
                                             <div class="row">
@@ -554,7 +554,7 @@
                                 <div class="col-lg-4 col-md-6 mb-3">
                                     <div class="card h-100 border-0 shadow">
                                         <div class="card-header">
-                                            Sale Returns
+                                            {{ __('sidebar.sale_returns') }}
                                         </div>
                                         <div class="card-body">
                                             <div class="row">
@@ -615,7 +615,7 @@
                                 <div class="col-lg-4 col-md-6 mb-3">
                                     <div class="card h-100 border-0 shadow">
                                         <div class="card-header">
-                                            Purchases
+                                            {{ __('sidebar.purchases') }}
                                         </div>
                                         <div class="card-body">
                                             <div class="row">
@@ -676,7 +676,7 @@
                                 <div class="col-lg-4 col-md-6 mb-3">
                                     <div class="card h-100 border-0 shadow">
                                         <div class="card-header">
-                                            Purchase Returns
+                                            {{ __('sidebar.purchase_returns') }}
                                         </div>
                                         <div class="card-body">
                                             <div class="row">
@@ -737,7 +737,7 @@
                                 <div class="col-lg-4 col-md-6 mb-3">
                                     <div class="card h-100 border-0 shadow">
                                         <div class="card-header">
-                                            Currencies
+                                            {{ __('sidebar.currencies') }}
                                         </div>
                                         <div class="card-body">
                                             <div class="row">
@@ -782,7 +782,7 @@
                                 <div class="col-lg-4 col-md-6 mb-3">
                                     <div class="card h-100 border-0 shadow">
                                         <div class="card-header">
-                                            Reports
+                                            {{ __('sidebar.reports') }}
                                         </div>
                                         <div class="card-body">
                                             <div class="row">
@@ -803,7 +803,7 @@
                                 <div class="col-lg-4 col-md-6 mb-3">
                                     <div class="card h-100 border-0 shadow">
                                         <div class="card-header">
-                                            Settings
+                                            {{ __('sidebar.settings') }}
                                         </div>
                                         <div class="card-body">
                                             <div class="row">

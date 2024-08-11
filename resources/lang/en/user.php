@@ -35,5 +35,121 @@ return [
         'action' => 'Action'
     ],
 
+    'role_create' => [
+        'create_role' => 'Create Role',
+        'role_name' => 'Role Name',
+        'permission' => [
+            'permissions' => 'Permissions',
+            'give_all_permission' => 'Give All Permissions',
+            'dashboard' => [
+                'total_stats' => 'Total Stats',
+                'notifications' => 'Notifications',
+                'month_overview' => 'Month Overview',
+                'weekly_sales_purchases' => 'Weekly Sales & Purchases',
+                'monthly_cashflow' => 'Monthly Cashflow',
+            ],
+            'user_management' => [
+                'name' => 'User Management',
+                'access' => 'Access',
+                'own_profile' => 'Own Profile',
+            ],
+            'products' => [
+                'access' => 'Access',
+                'view' => 'View',
+                'create' => 'Create',
+                'edit' => 'Edit',
+                'category' => 'Category',
+                'print_barcodes' => 'Print Barcodes',
+            ],
+            'adjustments' => [
+                'access' => 'Access',
+                'view' => 'View',
+                'create' => 'Create',
+                'edit' => 'Edit',
+                'delete' => 'Delete',
+            ],
+            'quotations' => [
+                'access' => 'Access',
+                'view' => 'View',
+                'create' => 'Create',
+                'edit' => 'Edit',
+                'delete' => 'Delete',
+                'send_email' => 'Send Email',
+                'sale_from_quotation' => 'Sale From Quotation',
+            ],
+            'expenses' => [
+                'access' => 'Access',
+                'edit' => 'Edit',
+                'delete' => 'Delete',
+                'category' => 'Category',
+            ],
+            'customers' => [
+                'access' => 'Access',
+                'create' => 'Create',
+                'edit' => 'Edit',
+                'delete' => 'Delete',
+            ],
+            'suppliers' => [
+                'access' => 'Access',
+                'create' => 'Create',
+                'edit' => 'Edit',
+                'delete' => 'Delete',
+            ],
+            'sales' => [
+                'access' => 'Access',
+                'view' => 'View',
+                'create' => 'Create',
+                'edit' => 'Edit',
+                'delete' => 'Delete',
+                'payments' => 'Payments',
+                'pos_system' => 'POS System',
+            ],
+            'sale_returns' => [
+                'access' => 'Access',
+                'view' => 'View',
+                'create' => 'Create',
+                'edit' => 'Edit',
+                'delete' => 'Delete',
+                'payments' => 'Payments',
+            ],
+            'purchases' => [
+                'access' => 'Access',
+                'view' => 'View',
+                'create' => 'Create',
+                'edit' => 'Edit',
+                'delete' => 'Delete',
+                'payments' => 'Payments',
+            ],
+            'purchase_returns' => [
+                'access' => 'Access',
+                'view' => 'View',
+                'create' => 'Create',
+                'edit' => 'Edit',
+                'delete' => 'Delete',
+                'payments' => 'Payments',
+            ],
+            'currencies' => [
+                'access' => 'Access',
+                'edit' => 'Edit',
+                'delete' => 'Delete',
+            ],
+            'reports' => [
+                'access' => 'Access',
+            ],
+            'settings' => [
+                'access' => 'Access',
+            ],
+        ],
+    ],
+
+    'role_view' => [
+        'add_role' => 'Add Role',
+        'name' => 'Name',
+        'email' => 'Email',
+        'action' => 'Action',
+    ],
+
+
+
 
 ];
