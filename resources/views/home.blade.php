@@ -9,7 +9,6 @@
 @endsection
 
 @section('content')
-{{-- tambah comment --}}
     <div class="container-fluid">
         @can('show_total_stats')
         <div class="row">
@@ -71,7 +70,6 @@
         </div>
         @endcan
 
-        @can('show_weekly_sales_purchases|show_month_overview')
         <div class="row mb-4">
             @can('show_weekly_sales_purchases')
             <div class="col-lg-7">
@@ -100,7 +98,6 @@
             </div>
             @endcan
         </div>
-        @endcan
 
         @can('show_monthly_cashflow')
         <div class="row">

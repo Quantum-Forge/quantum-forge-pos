@@ -37,6 +37,7 @@ return [
 
     'role_create' => [
         'create_role' => 'Create Role',
+        'update_role' => 'Update Role',
         'role_name' => 'Role Name',
         'permission' => [
             'permissions' => 'Permissions',
@@ -58,6 +59,7 @@ return [
                 'view' => 'View',
                 'create' => 'Create',
                 'edit' => 'Edit',
+                'delete' => 'Delete',
                 'category' => 'Category',
                 'print_barcodes' => 'Print Barcodes',
             ],
@@ -80,18 +82,21 @@ return [
             'expenses' => [
                 'access' => 'Access',
                 'edit' => 'Edit',
+                'create' => 'Create',
                 'delete' => 'Delete',
                 'category' => 'Category',
             ],
             'customers' => [
                 'access' => 'Access',
                 'create' => 'Create',
+                'view' => 'View',
                 'edit' => 'Edit',
                 'delete' => 'Delete',
             ],
             'suppliers' => [
-                'access' => 'Access',
+               'access' => 'Access',
                 'create' => 'Create',
+                'view' => 'View',
                 'edit' => 'Edit',
                 'delete' => 'Delete',
             ],
@@ -104,7 +109,7 @@ return [
                 'payments' => 'Payments',
                 'pos_system' => 'POS System',
             ],
-            'sale_returns' => [
+            'sales_return' => [
                 'access' => 'Access',
                 'view' => 'View',
                 'create' => 'Create',
@@ -120,7 +125,7 @@ return [
                 'delete' => 'Delete',
                 'payments' => 'Payments',
             ],
-            'purchase_returns' => [
+            'purchase_return' => [
                 'access' => 'Access',
                 'view' => 'View',
                 'create' => 'Create',
@@ -130,7 +135,7 @@ return [
             ],
             'currencies' => [
                 'access' => 'Access',
-                'edit' => 'Edit',
+                'create' => 'Create',
                 'delete' => 'Delete',
             ],
             'reports' => [

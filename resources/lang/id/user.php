@@ -39,6 +39,7 @@ return [
     
     'role_create' => [
         'create_role' => 'Buat Peran',
+        'update_role' => 'Perbarui Peran',
         'role_name' => 'Nama Peran',
         'permission' => [
             'permissions' => 'Izin',
@@ -59,6 +60,7 @@ return [
                 'view' => 'Lihat',
                 'create' => 'Buat',
                 'edit' => 'Edit',
+                'delete' => 'Hapus',
                 'category' => 'Kategori',
                 'print_barcodes' => 'Cetak Barcode',
             ],
@@ -81,18 +83,21 @@ return [
             'expenses' => [
                 'access' => 'Akses',
                 'edit' => 'Edit',
+                'create' => 'Buat',
                 'delete' => 'Hapus',
                 'category' => 'Kategori',
             ],
             'customers' => [
                 'access' => 'Akses',
                 'create' => 'Buat',
+                'view' => 'Lihat',
                 'edit' => 'Edit',
                 'delete' => 'Hapus',
             ],
             'suppliers' => [
                 'access' => 'Akses',
                 'create' => 'Buat',
+                'view' => 'Lihat',
                 'edit' => 'Edit',
                 'delete' => 'Hapus',
             ],
@@ -105,7 +110,7 @@ return [
                 'payments' => 'Pembayaran',
                 'pos_system' => 'Sistem POS',
             ],
-            'sale_returns' => [
+            'sales_return' => [
                 'access' => 'Akses',
                 'view' => 'Lihat',
                 'create' => 'Buat',
@@ -121,7 +126,7 @@ return [
                 'delete' => 'Hapus',
                 'payments' => 'Pembayaran',
             ],
-            'purchase_returns' => [
+            'purchase_return' => [
                 'access' => 'Akses',
                 'view' => 'Lihat',
                 'create' => 'Buat',
@@ -131,7 +136,7 @@ return [
             ],
             'currencies' => [
                 'access' => 'Akses',
-                'edit' => 'Edit',
+                'create' => 'Buat',
                 'delete' => 'Hapus',
             ],
             'reports' => [
@@ -146,7 +151,7 @@ return [
     'role_view' => [
         'add_role' => 'Tambah Peran',
         'name' => 'Nama',
-        'email' => 'Email',
+        'permission' => 'Izin',
        'action' => 'Aksi'
     ],
 

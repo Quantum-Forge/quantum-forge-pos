@@ -21,7 +21,7 @@
                     <div class="card-body">
                         <!-- Button trigger modal -->
                         <a href="{{ route('roles.create') }}" class="btn btn-primary">
-                            Add Role <i class="bi bi-plus"></i>
+                            {{ __('user.role_view.add_role') }} <i class="bi bi-plus"></i>
                         </a>
 
                         <hr>
