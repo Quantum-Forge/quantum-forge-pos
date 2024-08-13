@@ -20,7 +20,7 @@
                 <div class="card">
                     <div class="card-body">
                         <a href="{{ route('currencies.create') }}" class="btn btn-primary">
-                            Add Currency <i class="bi bi-plus"></i>
+                            {{ __('setting.currency.add_currency') }} <i class="bi bi-plus"></i>
                         </a>
 
                         <hr>

@@ -21,7 +21,7 @@
                 <div class="card border-0 shadow-sm">
                     <div class="card-body">
                         <a href="{{ route('units.create') }}" class="btn btn-primary">
-                            Add Unit <i class="bi bi-plus"></i>
+                            {{ __('setting.unit.add_unit') }} <i class="bi bi-plus"></i>
                         </a>
 
                         <hr>
@@ -31,11 +31,11 @@
                                 <thead>
                                 <tr>
                                     <th class="align-middle">No.</th>
-                                    <th class="align-middle">Name</th>
-                                    <th class="align-middle">Short Name</th>
-                                    <th class="align-middle">Operator</th>
-                                    <th class="align-middle">Operation Value</th>
-                                    <th class="align-middle">Action</th>
+                                    <th class="align-middle">{{ __('setting.unit.unit_name') }}</th>
+                                    <th class="align-middle">{{ __('setting.unit.short_name') }}</th>
+                                    <th class="align-middle">{{ __('setting.unit.operator') }}</th>
+                                    <th class="align-middle">{{ __('setting.unit.operation_value') }}</th>
+                                    <th class="align-middle">{{ __('setting.unit.action') }}</th>
                                 </tr>
                                 </thead>
                                 <tbody>

@@ -47,13 +47,13 @@ class CurrencyDataTable extends DataTable
 
     protected function getColumns() {
         return [
-            Column::make('currency_name')
+            Column::make('currency_name')->title(__('setting.currency.currency_name'))
                 ->className('text-center align-middle'),
 
-            Column::make('code')
+            Column::make('code')->title(__('setting.currency.code'))
                 ->className('text-center align-middle'),
 
-            Column::make('symbol')
+            Column::make('symbol')->title(__('setting.currency.symbol'))
                 ->className('text-center align-middle'),
 
             Column::make('thousand_separator')
@@ -62,7 +62,7 @@ class CurrencyDataTable extends DataTable
             Column::make('decimal_separator')
                 ->className('text-center align-middle'),
 
-            Column::computed('action')
+            Column::computed('action')->title(__('setting.currency.action'))
                 ->exportable(false)
                 ->printable(false)
                 ->className('text-center align-middle'),
