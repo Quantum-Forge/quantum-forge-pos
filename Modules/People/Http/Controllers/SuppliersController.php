@@ -47,7 +47,7 @@ class SuppliersController extends Controller
             'address'        => $request->address
         ]);
 
-        toast('Supplier Created!', 'success');
+        toast(__('toast.supplier_created'), 'success');
 
         return redirect()->route('suppliers.index');
     }
@@ -88,7 +88,7 @@ class SuppliersController extends Controller
             'address'        => $request->address
         ]);
 
-        toast('Supplier Updated!', 'info');
+        toast(__('toast.supplier_updated'), 'info');
 
         return redirect()->route('suppliers.index');
     }
@@ -99,7 +99,7 @@ class SuppliersController extends Controller
 
         $supplier->delete();
 
-        toast('Supplier Deleted!', 'warning');
+        toast(__('toast.supplier_deleted'), 'warning');
 
         return redirect()->route('suppliers.index');
     }

@@ -28,7 +28,7 @@
         @can('delete_sales')
             <button id="delete" class="dropdown-item" onclick="
                 event.preventDefault();
-                if (confirm('Are you sure? It will delete the data permanently!')) {
+                if (confirm('{{ __('toast.delete_text') }}')) {
                 document.getElementById('destroy{{ $data->id }}').submit()
                 }">
                 <i class="bi bi-trash mr-2 text-danger" style="line-height: 1;"></i> Delete

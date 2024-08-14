@@ -97,7 +97,7 @@ class PosController extends Controller
             session()->put('id_print_invoice', $sale->id);
         });
 
-        toast('POS Sale Created!', 'success');
+        toast(__('toast.pos_sale_created'), 'success');
 
         return redirect()->route('sales.index');
     }

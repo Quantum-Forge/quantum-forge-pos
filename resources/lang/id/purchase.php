@@ -40,8 +40,5 @@ return [
     'show_payments' => 'Lihat Pembayaran',
     'add_payment' => 'Tambah Pembayaran',
     'delete' => 'Hapus',
-    'delete_text' => 'Anda yakin ingin menghapus data ini? Ini akan menghapus data secara permanen!',
-    'purchase_deleted' => 'Pembelian Dihapus!',
-    'purchase_updated' => 'Pembelian Diperbarui!',
-    'purchase_created' => 'Pembelian Dibuat!'
+    
 ];

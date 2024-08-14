@@ -6,7 +6,7 @@
 @can('access_sale_payments')
     <button id="delete" class="btn btn-danger btn-sm" onclick="
         event.preventDefault();
-        if (confirm(' {{ __('sales.delete_text') }}')) {
+        if (confirm('{{ __('toast.delete_text') }}')) {
         document.getElementById('destroy{{ $data->id }}').submit()
         }
         ">

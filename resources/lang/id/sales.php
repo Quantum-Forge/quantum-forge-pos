@@ -40,8 +40,4 @@ return [
     'show_payments' => 'Lihat Pembayaran',
     'add_payment' => 'Tambah Pembayaran',
     'delete' => 'Hapus',
-    'delete_text' => 'Anda yakin ingin menghapus data ini? Ini akan menghapus data secara permanen!',
-    'sales_deleted' => 'Penjualan Dihapus!',
-    'sales_updated' => 'Penjualan Diperbarui!',
-    'sales_created' => 'Penjualan Dibuat!'
 ];

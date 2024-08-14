@@ -40,8 +40,4 @@ return [
     'show_payments' => 'Show Payments',
     'add_payment' => 'Add Payment',
     'delete' => 'Delete',
-    'delete_text' => 'Are you sure? It will delete the data permanently!',
-    'purchase_deleted' => 'Purchase Deleted!',
-    'purchase_updated' => 'Purchase Updated!',
-    'purchase_created' => 'Purchase Created!'
 ];

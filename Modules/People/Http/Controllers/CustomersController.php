@@ -47,7 +47,7 @@ class CustomersController extends Controller
             'address'        => $request->address
         ]);
 
-        toast('Customer Created!', 'success');
+        toast(__('toast.customer_created'), 'success');
 
         return redirect()->route('customers.index');
     }
@@ -88,7 +88,7 @@ class CustomersController extends Controller
             'address'        => $request->address
         ]);
 
-        toast('Customer Updated!', 'info');
+        toast(__('toast.customer_updated'), 'info');
 
         return redirect()->route('customers.index');
     }
@@ -99,7 +99,7 @@ class CustomersController extends Controller
 
         $customer->delete();
 
-        toast('Customer Deleted!', 'warning');
+        toast(__('toast.customer_deleted'), 'warning');
 
         return redirect()->route('customers.index');
     }

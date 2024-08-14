@@ -100,7 +100,7 @@ class SaleController extends Controller
             }
         });
 
-        toast(__('sales.sales_created'), 'success');
+        toast(__('toast.sales_created'), 'success');
 
         return redirect()->route('sales.index');
     }
@@ -215,7 +215,7 @@ class SaleController extends Controller
             Cart::instance('sale')->destroy();
         });
 
-        toast(__('sales.sales_updated'), 'info');
+        toast(__('toast.sales_updated'), 'info');
 
         return redirect()->route('sales.index');
     }
@@ -226,7 +226,7 @@ class SaleController extends Controller
 
         $sale->delete();
 
-        toast(__('sales.sales_deleted'), 'warning');
+        toast(__('toast.sales_deleted'), 'warning');
 
         return redirect()->route('sales.index');
     }

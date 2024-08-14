@@ -40,8 +40,5 @@ return [
     'show_payments' => 'Show Payments',
     'add_payment' => 'Add Payment',
     'delete' => 'Delete',
-    'delete_text' => 'Are you sure you want to delete this data? This will permanently delete the data!',
-    'sales_deleted' => 'Sales Deleted!',
-    'sales_updated' => 'Sales Updated!',
-    'sales_created' => 'Sales Created!'
+    
 ];
