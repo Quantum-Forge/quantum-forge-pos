@@ -27,7 +27,7 @@
                             <div class="form-row">
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label for="customer_name">Customer Name <span class="text-danger">*</span></label>
+                                        <label for="customer_name">{{ __('party.customer.customer_name') }} <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="customer_name" required>
                                     </div>
                                 </div>
@@ -48,13 +48,13 @@
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="city">City <span class="text-danger">*</span></label>
+                                        <label for="city">{{ __('party.customer.city') }} <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="city" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="country">Country <span class="text-danger">*</span></label>
+                                        <label for="country">{{ __('party.customer.country') }} <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="country" required>
                                     </div>
                                 </div>
@@ -63,7 +63,7 @@
                             <div class="form-row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <label for="address">Address <span class="text-danger">*</span></label>
+                                        <label for="address">{{ __('party.customer.address') }} <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="address" required>
                                     </div>
                                 </div>
