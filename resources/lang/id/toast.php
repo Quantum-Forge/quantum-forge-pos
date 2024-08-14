@@ -64,11 +64,11 @@ return [
     'user_updated' => 'Pengguna Diperbarui!',
     'user_created' => 'Pengguna Dibuat!',
     'something_went_wrong' => 'Terjadi Kesalahan',
-    'sent_on' => 'Sent On!',
-    'pos_sale_created' => 'POS Sale Created!',
-    'setting_updated' => 'Setting Updated!',
-    'user_created_and_assigned' => 'User Created & Assigned',
-    'user_updated_and_assigned' => 'User Updated & Assigned',
-    'user_deleted' => 'User Deleted',
+    'sent_on' => 'Dikirim!',
+    'pos_sale_created' => 'Penjualan POS dibuat!',
+    'setting_updated' => 'Pengaturan Diperbarui!',
+    'user_created_and_assigned' => "Pengguna Dibuat & Diberikan Peran ':role'!",
+    'user_updated_and_assigned' => "Pengguna Diperbarui & Diberikan Peran ':role'!",
+    'user_deleted' => 'Pengguna Dihapus!',
 
 ];

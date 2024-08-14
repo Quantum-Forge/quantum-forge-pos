@@ -60,7 +60,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="role">Role <span class="text-danger">*</span></label>
+                                <label for="role">{{ __('user.create_user.role') }} <span class="text-danger">*</span></label>
                                 <select class="form-control" name="role" id="role" required>
                                     <option value="" selected disabled>{{ __('user.create_user.select_role') }}...</option>
                                     @foreach(\Spatie\Permission\Models\Role::where('name', '!=', 'Super Admin')->get() as $role)
@@ -73,8 +73,8 @@
                                 <label for="is_active">Status <span class="text-danger">*</span></label>
                                 <select class="form-control" name="is_active" id="is_active" required>
                                     <option value="" selected disabled>{{ __('user.create_user.select_status') }}...</option>
-                                    <option value="1">Active</option>
-                                    <option value="2">Deactive</option>
+                                    <option value="1">{{ __('user.update_user.status_opt.active') }}</option>
+                                    <option value="2">{{ __('user.update_user.status_opt.deactivate') }}</option>
                                 </select>
                             </div>
                         </div>
