@@ -5,15 +5,8 @@
     @endphp
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="checkoutModalLabel">
-                    <i class="bi bi-cart-check text-primary"></i> Confirm Sale
-                </h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <form id="checkout-form" action="{{ route('app.pos.store') }}" method="POST">
+           
+            <form id="checkout-form" class="mt-3" action="{{ route('app.pos.store') }}" method="POST">
                 @csrf
                 <div class="modal-body">
                     @if (session()->has('checkout_message'))
@@ -108,7 +101,7 @@
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ __('form.close') }}</button>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
             </form>

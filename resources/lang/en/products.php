@@ -10,6 +10,7 @@ return [
     'cost' => 'Cost',
     'price' => 'Price',
     'quantity' => 'Quantity',
+    'action' => 'Action',
     'create' => [
         'title' => 'Create Product',
         'short_title' => 'Add',

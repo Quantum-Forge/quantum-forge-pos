@@ -8,7 +8,6 @@ return [
     'note' => 'Catatan',
     'payment_method' => 'Metode Pembayaran',
     'amount_paid' => 'Jumlah Terbayarkan',
-    'status' => 'Status',
     'pending' => 'Menunggu',
     'shipped' => 'Dikirim',
     'ordered' => 'Dipesan',
@@ -27,7 +26,19 @@ return [
         'linkaja' => 'LinkAja',
         'shopeepay' => 'ShopeePay',
     ],
-    'qr_code' => 'QR Code',
+    'qr_code' => 'QRIS',
     'cheque' => 'Cek',
+    'status' => [
+        'name' => 'Status',
+        'Pending' => 'Menunggu',
+        'Shipped' => 'Dikirim',
+        'Ordered' => 'Dipesan',
+        'Completed' => 'Selesai',
+        'Unpaid' => 'Belum Lunas',
+        'Paid' => 'Lunas',
+        'Partial' => 'Parsial',
+    ],
+    'save_changes' => 'Simpan Perubahan',
+    'close' => 'Tutup'
    
 ];

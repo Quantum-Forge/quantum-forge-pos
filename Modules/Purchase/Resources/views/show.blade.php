@@ -25,7 +25,7 @@
                         </a>
                         <a target="_blank" class="btn btn-sm btn-info mfe-1 d-print-none"
                             href="{{ route('purchases.pdf', $purchase->id) }}">
-                            <i class="bi bi-save"></i> {{ __('purchase.save') }}
+                            <i class="bi bi-save mr-1"></i> {{ __('purchase.save') }}
                         </a>
                     </div>
                     <div class="card-body">
@@ -52,10 +52,10 @@
                                 <div>{{ __('purchase.date') }}:
                                     {{ \Carbon\Carbon::parse($purchase->date)->format('d M, Y') }}</div>
                                 <div>
-                                    {{ __('purchase.status') }}: <strong>{{ $purchase->status }}</strong>
+                                    {{ __('purchase.status') }}: <strong>{{ __('form.status.' . $purchase->status) }}</strong>
                                 </div>
                                 <div>
-                                    {{ __('purchase.payment_status') }}: <strong>{{ $purchase->payment_status }}</strong>
+                                    {{ __('purchase.payment_status') }}: <strong>{{ __('form.status.' . $purchase->payment_status) }}</strong>
                                 </div>
                             </div>
 

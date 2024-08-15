@@ -10,6 +10,7 @@ return [
     'cost' => 'Biaya',
     'price' => 'Harga',
     'quantity' => 'Kuantitas',
+    'action' => 'Aksi',
     'create' => [
         'title' => 'Buat Produk',
         'short_title' => 'Tambah',

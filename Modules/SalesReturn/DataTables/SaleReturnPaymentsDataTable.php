@@ -50,19 +50,19 @@ class SaleReturnPaymentsDataTable extends DataTable
 
     protected function getColumns() {
         return [
-            Column::make('date')
+            Column::make('date')->title(__('sales_return.date'))
                 ->className('align-middle text-center'),
 
-            Column::make('reference')
+            Column::make('reference')->title(__('sales_return.reference'))
                 ->className('align-middle text-center'),
 
-            Column::computed('amount')
+            Column::computed('amount')->title(__('sales_return.amount'))
                 ->className('align-middle text-center'),
 
-            Column::make('payment_method')
+            Column::make('payment_method')->title(__('sales_return.payment_method'))
                 ->className('align-middle text-center'),
 
-            Column::computed('action')
+            Column::computed('action')->title(__('sales_return.action'))
                 ->exportable(false)
                 ->printable(false)
                 ->className('align-middle text-center'),

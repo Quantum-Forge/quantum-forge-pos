@@ -20,7 +20,7 @@
                 <div class="col-lg-12">
                     @include('utils.alerts')
                     <div class="form-group">
-                        <button class="btn btn-primary">Update Payment <i class="bi bi-check"></i></button>
+                        <button class="btn btn-primary">{{ __('sales_return.update_payment') }} <i class="bi bi-check"></i></button>
                     </div>
                 </div>
                 <div class="col-lg-12">
@@ -44,13 +44,13 @@
                             <div class="form-row">
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="due_amount">Due Amount <span class="text-danger">*</span></label>
+                                        <label for="due_amount">{{ __('sales_return.due_amount') }} <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="due_amount" required value="{{ format_currency($sale_return->due_amount) }}" readonly>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="amount">Amount <span class="text-danger">*</span></label>
+                                        <label for="amount">{{ __('sales_return.amount') }} <span class="text-danger">*</span></label>
                                         <div class="input-group">
                                             <input id="amount" type="text" class="form-control" name="amount" required value="{{ old('amount') ?? $saleReturnPayment->amount }}">
                                             <div class="input-group-append">
@@ -76,7 +76,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="note">Note</label>
+                                <label for="note">{{ __('sales_return.note') }}</label>
                                 <textarea class="form-control" rows="4" name="note">{{ old('note') ?? $saleReturnPayment->note }}</textarea>
                             </div>
 

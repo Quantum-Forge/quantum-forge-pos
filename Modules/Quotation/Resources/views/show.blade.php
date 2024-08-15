@@ -25,7 +25,7 @@
                         </a>
                         <a target="_blank" class="btn btn-sm btn-info mfe-1 d-print-none"
                             href="{{ route('quotations.pdf', $quotation->id) }}">
-                            <i class="bi bi-save"></i> {{ __('quotation.save') }}
+                            <i class="bi bi-save mr-1"></i> {{ __('quotation.save') }}
                         </a>
                     </div>
                     <div class="card-body">

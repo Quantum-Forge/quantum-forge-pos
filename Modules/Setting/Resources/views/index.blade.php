@@ -81,7 +81,7 @@
                             </div>
 
                             <div class="form-group mb-0">
-                                <button type="submit" class="btn btn-primary"><i class="bi bi-check"></i> Save Changes</button>
+                                <button type="submit" class="btn btn-primary"><i class="bi bi-check"></i> {{ __('form.save_changes') }}</button>
                             </div>
                         </form>
                     </div>
@@ -171,7 +171,7 @@
                             </div>
 
                             <div class="form-group mb-0">
-                                <button type="submit" class="btn btn-primary"><i class="bi bi-check"></i> Save Changes</button>
+                                <button type="submit" class="btn btn-primary"><i class="bi bi-check"></i> {{ __('form.save_changes') }}</button>
                             </div>
                         </form>
                     </div>

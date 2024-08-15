@@ -42,10 +42,10 @@
                             <div>{{ __('sales.invoice') }}: <strong>INV/{{ $sale->reference }}</strong></div>
                             <div>{{ __('sales.date') }}: {{ \Carbon\Carbon::parse($sale->date)->format('d M, Y') }}</div>
                             <div>
-                                {{ __('sales.status') }}: <strong>{{ $sale->status }}</strong>
+                                {{ __('sales.status') }}: <strong>{{ __('form.status.' . $sale->status) }}</strong>
                             </div>
                             <div>
-                                {{ __('sales.payment_status') }}: <strong>{{ $sale->payment_status }}</strong>
+                                {{ __('sales.payment_status') }}: <strong>{{ __('form.status.' . $sale->payment_status) }}</strong>
                             </div>
                         </div>
 

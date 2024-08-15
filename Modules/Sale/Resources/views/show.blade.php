@@ -23,7 +23,7 @@
                             <i class="bi bi-printer"></i> {{ __('sales.print') }}
                         </a>
                         <a target="_blank" class="btn btn-sm btn-info mfe-1 d-print-none" href="{{ route('sales.pdf', $sale->id) }}">
-                            <i class="bi bi-save"></i> {{ __('sales.save') }}
+                            <i class="bi bi-save mr-1"></i> {{ __('sales.save') }}
                         </a>
                     </div>
                     <div class="card-body">
@@ -49,10 +49,10 @@
                                 <div>{{ __('sales.invoice') }}: <strong>INV/{{ $sale->reference }}</strong></div>
                                 <div>{{ __('sales.date') }}: {{ \Carbon\Carbon::parse($sale->date)->format('d M, Y') }}</div>
                                 <div>
-                                    {{ __('sales.status') }}: <strong>{{ $sale->status }}</strong>
+                                    {{ __('sales.status') }}: <strong>{{ __('form.status.' . $sale->status) }}</strong>
                                 </div>
                                 <div>
-                                    {{ __('sales.payment_status') }}: <strong>{{ $sale->payment_status }}</strong>
+                                    {{ __('sales.payment_status') }}: <strong>{{ __('form.status.' . $sale->payment_status) }}</strong>
                                 </div>
                             </div>
 

@@ -49,11 +49,11 @@
                                 <div>{{ __('purchase.date') }}:
                                     {{ \Carbon\Carbon::parse($purchase->date)->format('d M, Y') }}</div>
                                 <div>
-                                    {{ __('purchase.status') }}: <strong>{{ $purchase->status }}</strong>
+                                    {{ __('purchase.status') }}: <strong>{{ __('form.status.' . $purchase->status) }}</strong>
                                 </div>
                                 <div>
                                     {{ __('purchase.payment_status') }}:
-                                    <strong>{{ $purchase->payment_status }}</strong>
+                                    <strong>{{ __('form.status.' . $purchase->payment_status) }}</strong>
                                 </div>
                             </div>
 

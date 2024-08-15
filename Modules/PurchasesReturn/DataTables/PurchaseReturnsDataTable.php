@@ -73,7 +73,7 @@ class PurchaseReturnsDataTable extends DataTable
                 ->title(__('purchase_return.supplier_name'))
                 ->className('text-center align-middle'),
 
-            Column::computed('status')->title(__('form.status'))
+            Column::computed('status')->title(__('form.status.name'))
                 ->className('text-center align-middle'),
 
             Column::computed('total_amount')

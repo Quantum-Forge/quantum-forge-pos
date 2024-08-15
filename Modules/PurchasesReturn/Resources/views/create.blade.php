@@ -67,7 +67,7 @@
                             <div class="form-row">
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="status">{{ __('form.status') }} <span
+                                        <label for="status">Status <span
                                                 class="text-danger">*</span></label>
                                         <select class="form-control" name="status" id="status" required>
                                             <option value="Pending">{{ __('form.pending') }}</option>

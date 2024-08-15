@@ -49,7 +49,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label>Payment Status</label>
+                                    <label>{{ __('reports.sales_return_report.payment_status') }} </label>
                                     <select wire:model="payment_status" class="form-control" name="payment_status">
                                         <option value="">{{ __('reports.sales_return_report.payment_status') }}...</option>
                                         <option value="Paid">{{ __('reports.sales_return_report.Paid') }}</option>
