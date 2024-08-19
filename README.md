@@ -49,110 +49,95 @@
 - **System Settings**
 - **Reports**
 
-### Installation of `wkhtmltopdf` on Windows and Linux
+Berikut adalah dokumentasi untuk instalasi `wkhtmltopdf` di sistem operasi Linux dan Windows. Dokumentasi ini mencakup langkah-langkah untuk menginstal dan mengonfigurasi `wkhtmltopdf`, serta memastikan bahwa `wkhtmltopdf` berfungsi dengan baik di kedua lingkungan.
 
-#### Windows Installation
+---
 
-1. **Download `wkhtmltopdf`**:
-   - Visit the [wkhtmltopdf downloads page](https://wkhtmltopdf.org/downloads.html).
-   - Download the Windows version of `wkhtmltopdf`.
+## Dokumentasi Instalasi `wkhtmltopdf`
 
-2. **Install `wkhtmltopdf`**:
-   - Run the installer and follow the installation steps.
-   - By default, it should be installed to `C:\wkhtmltopdf`.
+### Instalasi di Linux
 
-3. **Verify Installation**:
-   - Open Command Prompt.
-   - Run the command:
-     ```sh
-     "C:\wkhtmltopdf\bin\wkhtmltopdf.exe" --version
-     ```
-   - You should see the version information of `wkhtmltopdf`.
+1. **Update Paket Sistem**
 
-4. **Add to System Path (Optional but recommended)**:
-   - Open System Properties (Right-click on My Computer -> Properties).
-   - Go to Advanced system settings.
-   - Click on Environment Variables.
-   - In the System variables section, find the `Path` variable and click Edit.
-   - Add the path `C:\wkhtmltopdf\bin` to the list of paths.
-   - Click OK to close all dialog boxes.
+   Sebelum menginstal `wkhtmltopdf`, pastikan sistem Anda diperbarui:
 
-   This allows you to run `wkhtmltopdf` from any Command Prompt without specifying the full path.
-
-#### Linux Installation
-
-1. **Download `wkhtmltopdf`**:
-   - You can download the precompiled binaries for Linux from the [wkhtmltopdf downloads page](https://wkhtmltopdf.org/downloads.html).
-
-2. **Install `wkhtmltopdf`**:
-   - For Debian-based systems (like Ubuntu):
-     ```sh
-     sudo apt-get update
-     sudo apt-get install -y wkhtmltopdf
-     ```
-
-   - For Red Hat-based systems (like CentOS):
-     ```sh
-     sudo yum install -y wkhtmltopdf
-     ```
-
-3. **Verify Installation**:
-   - Open Terminal.
-   - Run the command:
-     ```sh
-     wkhtmltopdf --version
-     ```
-   - You should see the version information of `wkhtmltopdf`.
-
-4. **Download and Install Precompiled Binaries**:
-   - Download the precompiled binaries from the [wkhtmltopdf GitHub releases page](https://github.com/wkhtmltopdf/packaging/releases).
-   - Extract the tarball:
-     ```sh
-     tar -xvzf wkhtmltox-<version>_linux-generic-amd64.tar.xz
-     ```
-   - Move the binaries to `/usr/local/bin`:
-     ```sh
-     sudo mv wkhtmltox/bin/wkhtmltopdf /usr/local/bin/wkhtmltopdf
-     sudo mv wkhtmltox/bin/wkhtmltoimage /usr/local/bin/wkhtmltoimage
-     ```
-
-   - Verify the installation by running:
-     ```sh
-     wkhtmltopdf --version
-     ```
-
-### Using `wkhtmltopdf` in Laravel
-
-#### Windows Configuration
-
-1. **Set the Binary Path** in `config/snappy.php`:
-   ```php
-   'pdf' => [
-       'enabled' => true,
-       'binary'  => '"C:\wkhtmltopdf\bin\wkhtmltopdf.exe"',
-       'timeout' => false,
-       'options' => [],
-       'env'     => [],
-   ],
+   ```bash
+   sudo apt-get update
+   sudo apt-get upgrade
    ```
 
-#### Linux Configuration
+2. **Install `wkhtmltopdf`**
 
-1. **Set the Binary Path** in `config/snappy.php`:
-   ```php
-   'pdf' => [
-       'enabled' => true,
-       'binary'  => '/usr/local/bin/wkhtmltopdf',
-       'timeout' => false,
-       'options' => [],
-       'env'     => [],
-   ],
+   Anda dapat menginstal `wkhtmltopdf` menggunakan manajer paket `apt`:
+
+   ```bash
+   sudo apt-get install wkhtmltopdf
    ```
 
-2. **Update `.env`** (optional):
+   Jika Anda memerlukan versi tertentu atau binary terbaru, ikuti langkah-langkah berikut:
+
+   a. **Unduh Binary dari Situs Resmi**
+
+      Kunjungi [halaman unduhan resmi wkhtmltopdf](https://wkhtmltopdf.org/downloads.html) dan unduh versi terbaru untuk Linux.
+
+   b. **Ekstrak dan Pindahkan Binary**
+
+      Misalkan file yang diunduh adalah `wkhtmltox_0.12.6-1.bionic_amd64.deb`:
+
+      ```bash
+      wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.bionic_amd64.deb
+      sudo dpkg -i wkhtmltox_0.12.6-1.bionic_amd64.deb
+      ```
+
+   c. **Pastikan Binary Bisa Diakses**
+
+      Verifikasi lokasi binary:
+
+      ```bash
+      which wkhtmltopdf
+      ```
+
+      Biasanya, binary terletak di `/usr/local/bin/wkhtmltopdf`.
+
+3. **Tambahkan Path ke File `.env`**
+
+   Tambahkan path binary ke file `.env` Anda:
+
    ```env
-   WKHTMLTOPDF_BINARY=/usr/local/bin/wkhtmltopdf
+   WKHTML_PDF_BINARY=/usr/local/bin/wkhtmltopdf
    ```
+---
 
+### Instalasi di Windows
+
+1. **Unduh Binary**
+
+   Kunjungi [halaman unduhan resmi wkhtmltopdf](https://wkhtmltopdf.org/downloads.html) dan unduh versi terbaru untuk Windows (misalnya, `wkhtmltox_0.12.6-1_windows-x86_64.exe`).
+
+2. **Install `wkhtmltopdf`**
+
+   a. **Jalankan Installer**
+
+      Jalankan file installer yang diunduh dan ikuti petunjuk untuk menyelesaikan instalasi.
+
+   b. **Verifikasi Instalasi**
+
+      Pastikan `wkhtmltopdf` dapat diakses dari command prompt:
+
+      ```cmd
+      wkhtmltopdf --version
+      ```
+
+   c. **Catat Lokasi Binary**
+
+      Lokasi default biasanya di `C:/Program Files/wkhtmltopdf/bin/wkhtmltopdf.exe`.
+
+3. **Tambahkan Path ke File `.env`**
+
+   Tambahkan path binary ke file `.env` Anda:
+
+   ```env
+   WKHTML_PDF_BINARY=C:/Program Files/wkhtmltopdf/bin/wkhtmltopdf.exe
+   ```
 
 
