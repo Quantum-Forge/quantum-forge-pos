@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'category' => 'Kategori',
+    'amount' => 'Jumlah',
     'reference' => 'Referensi',
     'customer' => 'Pelanggan',
     'supplier' => 'Pemasok',

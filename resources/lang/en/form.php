@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'category' => 'Category',
+    'amount' => 'Amount',
     'reference' => 'Reference',
     'customer' => 'Customer',
     'supplier' => 'Supplier',

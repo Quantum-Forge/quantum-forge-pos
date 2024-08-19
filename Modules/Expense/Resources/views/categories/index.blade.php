@@ -23,7 +23,7 @@
                     <div class="card-body">
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#categoryCreateModal">
-                            Add Category <i class="bi bi-plus"></i>
+                            {{ __('expense.add_category') }} <i class="bi bi-plus"></i>
                         </button>
 
                         <hr>
