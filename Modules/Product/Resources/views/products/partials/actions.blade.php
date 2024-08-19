@@ -9,7 +9,7 @@
 </a>
 @endcan
 @can('delete_products')
-{{-- <button id="delete" class="btn btn-danger btn-sm" onclick="
+<button id="delete" class="btn btn-danger btn-sm" onclick="
     event.preventDefault();
     if (confirm('{{ __('toast.delete_text') }}')) {
         document.getElementById('destroy{{ $data->id }}').submit()
@@ -20,5 +20,5 @@
         @csrf
         @method('delete')
     </form>
-</button> --}}
+</button>
 @endcan

@@ -3,6 +3,7 @@
 namespace Modules\Product\Entities;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Modules\Product\Notifications\NotifyQuantityAlert;
 use Spatie\MediaLibrary\HasMedia;
@@ -12,11 +13,11 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 class Product extends Model implements HasMedia
 {
 
-    use HasFactory, InteractsWithMedia;
+    use HasFactory, InteractsWithMedia, SoftDeletes; // Include SoftDeletes trait
 
     protected $guarded = [];
-
     protected $with = ['media'];
+    protected $dates = ['deleted_at']; // Specify dates that should be treated as Carbon instances
 
     public function category() {
         return $this->belongsTo(Category::class, 'category_id', 'id');
