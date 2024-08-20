@@ -3,9 +3,7 @@
 @section('title', 'Create User')
 
 @section('third_party_stylesheets')
-    <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet"/>
-    <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css"
-          rel="stylesheet">
+     @include('includes.filepond-css')
 @endsection
 
 @section('breadcrumb')
@@ -96,12 +94,10 @@
 @endsection
 
 @section('third_party_scripts')
-    <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
-    <script
-        src="https://unpkg.com/filepond-plugin-file-validate-size/dist/filepond-plugin-file-validate-size.js"></script>
-    <script
-        src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"></script>
-    <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+   <script src="{{ asset('js/unpkg/filepond-plugin-image-preview.js') }}"></script>
+    <script src="{{ asset('js/unpkg/filepond-plugin-file-validate-size.js') }}"></script>
+    <script src="{{ asset('js/unpkg/filepond-plugin-file-validate-type.js') }}"></script>
+    <script src="{{ asset('js/unpkg/filepond.js') }}"></script>
 @endsection
 
 @push('page_scripts')

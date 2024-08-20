@@ -9,5 +9,7 @@ return [
     'current_pass' => 'Current Password',
     'new_pass' => 'New Password',
     'conf_pass' => 'Confirm Password',
+    'update_profile' => 'Update Profile',
+    'update_password' => 'Update Password'
 ];
 

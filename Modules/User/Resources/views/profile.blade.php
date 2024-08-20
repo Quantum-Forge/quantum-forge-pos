@@ -49,7 +49,7 @@
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary">Update Profile <i class="bi bi-check"></i></button>
+                                <button type="submit" class="btn btn-primary">{{ __('profile.update_profile') }} <i class="bi bi-check"></i></button>
                             </div>
                         </form>
                     </div>
@@ -83,7 +83,7 @@
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary">Update Password <i class="bi bi-check"></i></button>
+                                <button type="submit" class="btn btn-primary">{{ __('profile.update_password') }} <i class="bi bi-check"></i></button>
                             </div>
                         </form>
                     </div>

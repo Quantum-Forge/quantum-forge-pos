@@ -3,7 +3,7 @@
 return [
     'adjustments' => 'Penyesuaian',
     'add_adjustment' => 'Tambah Penyesuaian',
-    'date' => 'Tgl',
+    'date' => 'Tanggal',
     'action' => 'Aksi',
     'reference' => 'Referensi',
     'products' => 'Produk',

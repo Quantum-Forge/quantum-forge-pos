@@ -2,7 +2,7 @@
 
 return [
     'add_quotation' => 'Tambah Penawaran',
-    'date' => 'Tgl',
+    'date' => 'Tanggal',
     'reference' => 'Referensi',
     'customer' => 'Pelanggan',
     'status' => 'Status',

@@ -12,7 +12,7 @@
     <!-- CoreUI CSS -->
     @vite('resources/sass/app.scss')
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap-icons/font/bootstrap-icons.min.css') }}">
 </head>
 <body class="c-app flex-row align-items-center">
 <div class="container">
