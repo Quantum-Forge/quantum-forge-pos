@@ -29,7 +29,7 @@
                 @empty
                     <div class="col-12">
                         <div class="alert alert-warning mb-0">
-                            Products Not Found...
+                            {{ __('search_product.npf') }}...
                         </div>
                     </div>
                 @endforelse
