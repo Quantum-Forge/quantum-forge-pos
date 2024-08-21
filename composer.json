@@ -18,6 +18,8 @@
         "livewire/livewire": "^3.0",
         "maatwebsite/excel": "^3.1",
         "milon/barcode": "^10.0",
+        "nativephp/electron": "^0.7.0",
+        "nativephp/laravel": "^0.5.3",
         "nwidart/laravel-modules": "^10.0",
         "phpoffice/phpspreadsheet": "^1.29",
         "realrashid/sweet-alert": "^6.0",
