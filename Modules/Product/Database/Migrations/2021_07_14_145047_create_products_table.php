@@ -29,6 +29,7 @@ class CreateProductsTable extends Migration
             $table->text('product_note')->nullable();
             $table->foreign('category_id')->references('id')->on('categories')->restrictOnDelete();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
