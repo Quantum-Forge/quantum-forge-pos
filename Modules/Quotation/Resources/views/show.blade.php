@@ -52,11 +52,7 @@
                                 <div>{{ __('quotation.date') }}:
                                     {{ \Carbon\Carbon::parse($quotation->date)->format('d M, Y') }}</div>
                                 <div>
-                                    {{ __('quotation.status') }}: <strong>{{ $quotation->status }}</strong>
-                                </div>
-                                <div>
-                                    {{ __('quotation.payment_status') }}:
-                                    <strong>{{ $quotation->payment_status }}</strong>
+                                   {{ __('quotation.status') }}: <strong>{{ __('quotation.' . $quotation->status) }}</strong>
                                 </div>
                             </div>
 

@@ -42,4 +42,6 @@ return [
     'payment_status' => 'Status Pemesanan',
     'print' => 'Cetak',
     'save' => 'Simpan',
+    'Pending' => 'Menunggu',
+    'Sent' => 'Terkirim'
 ];

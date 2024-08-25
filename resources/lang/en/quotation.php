@@ -42,4 +42,6 @@ return [
     'payment_status' => 'Payment Status',
     'print' => 'Print',
     'save' => 'Save',
+    'Pending' => 'Pending',
+    'Sent' => 'Sent'
 ];
