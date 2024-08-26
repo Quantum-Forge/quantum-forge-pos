@@ -29,7 +29,7 @@
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">
-                                <i class="cil-envelope-open"></i>
+                                    <i class="fas fa-envelope"></i>
                                 </span>
                             </div>
                             <input type="email" class="form-control @error('email') is-invalid @enderror" name="email"
@@ -41,7 +41,7 @@
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                               <span class="input-group-text">
-                                <i class="cil-lock-locked"></i>
+                                <i class="fas fa-lock"></i>
                               </span>
                             </div>
                             <input type="password" class="form-control @error('password') is-invalid @enderror"
@@ -53,14 +53,14 @@
                         <div class="input-group mb-4">
                             <div class="input-group-prepend">
                               <span class="input-group-text">
-                                <i class="cil-lock-locked"></i>
+                                <i class="fas fa-lock"></i>
                               </span>
                             </div>
                             <input type="password" name="password_confirmation" class="form-control"
                                    placeholder="Confirm password">
                         </div>
                         <button type="submit" class="btn btn-block btn-primary btn-block btn-flat">
-                            <i class="fa fa-btn fa-refresh"></i> Reset
+                            <i class="fas fa-redo"></i> Reset
                         </button>
                     </form>
                 </div>
