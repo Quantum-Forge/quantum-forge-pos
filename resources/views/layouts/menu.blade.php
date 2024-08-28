@@ -5,6 +5,14 @@
     </a>
 </li>
 
+@can('create_pos_sales')
+<li class="c-sidebar-nav-item {{ request()->routeIs('app.pos.index') ? 'c-active' : '' }}">
+    <a class="c-sidebar-nav-link" href="{{ route('app.pos.index') }}">
+        <i class="c-sidebar-nav-icon bi bi-credit-card" style="line-height: 1;"></i> POS Sales
+    </a>
+</li>
+@endcan
+
 @can('access_products')
 <li class="c-sidebar-nav-title">{{ __('sidebar.products') }}</li>
 @can('access_product_categories')
