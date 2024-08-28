@@ -55,58 +55,87 @@ Berikut adalah dokumentasi untuk instalasi `wkhtmltopdf` di sistem operasi Linux
 
 ## Dokumentasi Instalasi `wkhtmltopdf`
 
-### Instalasi di Linux
+### Setup di hpanel
 
-1. **Update Paket Sistem**
+Berikut adalah langkah-langkah untuk menginstal `wkhtmltopdf` menggunakan file `wkhtmltox-0.12.4_linux-generic-amd64.tar` di shared hosting Anda dengan menggunakan file manager dan kemudian mengonfigurasi variabel lingkungan di file `.env`. Saya akan mengaburkan bagian yang perlu disembunyikan seperti yang diminta.
 
-   Sebelum menginstal `wkhtmltopdf`, pastikan sistem Anda diperbarui:
+### **Langkah Instalasi `wkhtmltopdf`**
 
-   ```bash
-   sudo apt-get update
-   sudo apt-get upgrade
-   ```
+#### **1. Download dan Extract File**
 
-2. **Install `wkhtmltopdf`**
+1. **Download File `wkhtmltox`**
 
-   Anda dapat menginstal `wkhtmltopdf` menggunakan manajer paket `apt`:
+   Jika Anda belum mendownload file tar, Anda bisa melakukannya menggunakan file manager atau melalui SSH (jika tersedia):
 
    ```bash
-   sudo apt-get install wkhtmltopdf
+   wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.4/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
    ```
 
-   Jika Anda memerlukan versi tertentu atau binary terbaru, ikuti langkah-langkah berikut:
+2. **Extract File di File Manager**
 
-   a. **Unduh Binary dari Situs Resmi**
+   - Masuk ke file manager hosting Anda.
+   - Upload file `wkhtmltox-0.12.4_linux-generic-amd64.tar.xz` ke direktori yang diinginkan (misalnya, `public_html` atau direktori lain).
+   - Pilih file tersebut dan gunakan opsi untuk mengekstrak file. Biasanya ada opsi seperti "Extract" atau "Unzip" di file manager Anda.
 
-      Kunjungi [halaman unduhan resmi wkhtmltopdf](https://wkhtmltopdf.org/downloads.html) dan unduh versi terbaru untuk Linux.
+3. **Temukan Folder Binary**
 
-   b. **Ekstrak dan Pindahkan Binary**
+   Setelah ekstraksi, pastikan folder `wkhtmltox/bin` berada di lokasi yang benar. Misalnya, jika Anda mengekstraknya di `public_html`, jalur folder mungkin akan terlihat seperti ini:
 
-      Misalkan file yang diunduh adalah `wkhtmltox_0.12.6-1.bionic_amd64.deb`:
-
-      ```bash
-      wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.bionic_amd64.deb
-      sudo dpkg -i wkhtmltox_0.12.6-1.bionic_amd64.deb
-      ```
-
-   c. **Pastikan Binary Bisa Diakses**
-
-      Verifikasi lokasi binary:
-
-      ```bash
-      which wkhtmltopdf
-      ```
-
-      Biasanya, binary terletak di `/usr/local/bin/wkhtmltopdf`.
-
-3. **Tambahkan Path ke File `.env`**
-
-   Tambahkan path binary ke file `.env` Anda:
-
-   ```env
-   WKHTML_PDF_BINARY=/usr/local/bin/wkhtmltopdf
+   ```bash
+   /home/your_username/domains/your_domain.com/public_html/wkhtmltox/bin/wkhtmltopdf
    ```
----
+
+   Gantilah `your_username` dan `your_domain.com` dengan informasi yang sesuai.
+
+#### **2. Konfigurasi `.env`**
+
+1. **Edit File `.env`**
+
+   - Buka file `.env` di direktori root proyek Anda menggunakan editor teks di file manager.
+
+   - Tambahkan atau ubah baris berikut untuk menyetel jalur binary `wkhtmltopdf`:
+
+     ```env
+     WKHTML_PDF_BINARY='/home/your_username/domains/your_domain.com/public_html/wkhtmltox/bin/wkhtmltopdf'
+     ```
+
+     Gantilah `your_username` dan `your_domain.com` dengan informasi yang sesuai.
+
+2. **Simpan Perubahan**
+
+   Setelah menambahkan baris tersebut, simpan perubahan dan tutup editor.
+
+#### **3. Verifikasi Instalasi**
+
+1. **Tes Binary**
+
+   Jika Anda dapat mengakses terminal SSH atau memiliki opsi untuk menjalankan perintah dari panel kontrol hosting, jalankan perintah berikut untuk memverifikasi bahwa binary `wkhtmltopdf` berfungsi:
+
+   ```bash
+   /home/your_username/domains/your_domain.com/public_html/wkhtmltox/bin/wkhtmltopdf --version
+   ```
+
+   Pastikan output menunjukkan versi yang benar dari `wkhtmltopdf`.
+
+2. **Gunakan dalam Aplikasi**
+
+   Jika aplikasi Anda menggunakan variabel `WKHTML_PDF_BINARY` yang telah Anda tetapkan di file `.env`, aplikasi harus dapat menggunakan binary `wkhtmltopdf` untuk menghasilkan PDF.
+
+### **Ringkasan Langkah**
+
+1. **Download dan Extract File:**
+   - Download `wkhtmltox-0.12.4_linux-generic-amd64.tar.xz`.
+   - Extract file menggunakan file manager ke lokasi yang diinginkan.
+
+2. **Konfigurasi `.env`:**
+   - Edit file `.env` dan tambahkan variabel `WKHTML_PDF_BINARY` dengan jalur absolute ke binary `wkhtmltopdf`.
+
+3. **Verifikasi Instalasi:**
+   - Tes binary dengan perintah langsung untuk memastikan bahwa ia berfungsi.
+
+Dengan langkah-langkah ini, Anda dapat menginstal dan mengkonfigurasi `wkhtmltopdf` pada hosting Anda tanpa akses root, menggunakan file manager dan pengaturan file `.env`.
+
+
 
 ### Instalasi di Windows
 
