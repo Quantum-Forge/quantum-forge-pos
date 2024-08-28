@@ -206,8 +206,10 @@
     </li>
 @endcan
 
-
+@canany(['access_user_management', 'access_units', 'access_currencies', 'access_settings'])
 <li class="c-sidebar-nav-title">{{ __('sidebar.settings') }}</li>
+@endcanany
+
 @can('access_user_management')
 <li class="c-sidebar-nav-item">
     <a class="c-sidebar-nav-link {{ request()->routeIs('users.create') ? 'c-active' : '' }}" href="{{ route('users.create') }}">
