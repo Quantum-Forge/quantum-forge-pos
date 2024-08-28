@@ -130,5 +130,12 @@ class PermissionsTableSeeder extends Seeder
 
         $role->givePermissionTo($permissions);
         $role->revokePermissionTo('access_user_management');
+        $role->revokePermissionTo('access_currencies');
+        $role->revokePermissionTo('create_currencies');
+        $role->revokePermissionTo('edit_currencies');
+        $role->revokePermissionTo('delete_currencies');
+        $role->revokePermissionTo('access_settings');
+        $role->revokePermissionTo('access_settings');
+        $role->revokePermissionTo('send_quotation_mails');
     }
 }
