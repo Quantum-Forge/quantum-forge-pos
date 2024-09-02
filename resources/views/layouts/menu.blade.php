@@ -5,6 +5,14 @@
     </a>
 </li>
 
+@can('create_pos_sales')
+<li class="c-sidebar-nav-item {{ request()->routeIs('app.pos.index') ? 'c-active' : '' }}">
+    <a class="c-sidebar-nav-link" href="{{ route('app.pos.index') }}">
+        <i class="c-sidebar-nav-icon bi bi-shop" style="line-height: 1;"></i> POS Sales
+    </a>
+</li>
+@endcan
+
 @can('access_products')
 <li class="c-sidebar-nav-title">{{ __('sidebar.products') }}</li>
 @can('access_product_categories')
@@ -206,45 +214,42 @@
     </li>
 @endcan
 
-
-<li class="c-sidebar-nav-title">{{ __('sidebar.settings') }}</li>
-@can('access_user_management')
-<li class="c-sidebar-nav-item">
-    <a class="c-sidebar-nav-link {{ request()->routeIs('users.create') ? 'c-active' : '' }}" href="{{ route('users.create') }}">
-        <i class="c-sidebar-nav-icon bi bi-person-plus" style="line-height: 1;"></i> {{ __('sidebar.create_user') }}
-    </a>
-</li>
-<li class="c-sidebar-nav-item">
-    <a class="c-sidebar-nav-link {{ request()->routeIs('users') ? 'c-active' : '' }}" href="{{ route('users.index') }}">
-        <i class="c-sidebar-nav-icon bi bi-person-lines-fill" style="line-height: 1;"></i> {{ __('sidebar.all_users') }}
-    </a>
-</li>
-<li class="c-sidebar-nav-item">
-    <a class="c-sidebar-nav-link {{ request()->routeIs('roles*') ? 'c-active' : '' }}" href="{{ route('roles.index') }}">
-        <i class="c-sidebar-nav-icon bi bi-key" style="line-height: 1;"></i> {{ __('sidebar.roles_permissions') }}
-    </a>
-</li>
-@endcan
-
-
-@can('access_units')
-<li class="c-sidebar-nav-item">
-    <a class="c-sidebar-nav-link {{ request()->routeIs('units*') ? 'c-active' : '' }}" href="{{ route('units.index') }}">
-        <i class="c-sidebar-nav-icon bi bi-calculator" style="line-height: 1;"></i> {{ __('sidebar.units') }}
-    </a>
-</li>
-@endcan
-@can('access_currencies')
-<li class="c-sidebar-nav-item">
-    <a class="c-sidebar-nav-link {{ request()->routeIs('currencies*') ? 'c-active' : '' }}" href="{{ route('currencies.index') }}">
-        <i class="c-sidebar-nav-icon bi bi-cash-stack" style="line-height: 1;"></i> {{ __('sidebar.currencies') }}
-    </a>
-</li>
-@endcan
 @can('access_settings')
-<li class="c-sidebar-nav-item">
-    <a class="c-sidebar-nav-link {{ request()->routeIs('settings*') ? 'c-active' : '' }}" href="{{ route('settings.index') }}">
-        <i class="c-sidebar-nav-icon bi bi-sliders" style="line-height: 1;"></i> {{ __('sidebar.system_settings') }}
-    </a>
-</li>
+<li class="c-sidebar-nav-title">{{ __('sidebar.settings') }}</li>
+    @can('access_user_management')
+    <li class="c-sidebar-nav-item">
+        <a class="c-sidebar-nav-link {{ request()->routeIs('users.create') ? 'c-active' : '' }}" href="{{ route('users.create') }}">
+            <i class="c-sidebar-nav-icon bi bi-person-plus" style="line-height: 1;"></i> {{ __('sidebar.create_user') }}
+        </a>
+    </li>
+    <li class="c-sidebar-nav-item">
+        <a class="c-sidebar-nav-link {{ request()->routeIs('users') ? 'c-active' : '' }}" href="{{ route('users.index') }}">
+            <i class="c-sidebar-nav-icon bi bi-person-lines-fill" style="line-height: 1;"></i> {{ __('sidebar.all_users') }}
+        </a>
+    </li>
+    <li class="c-sidebar-nav-item">
+        <a class="c-sidebar-nav-link {{ request()->routeIs('roles*') ? 'c-active' : '' }}" href="{{ route('roles.index') }}">
+            <i class="c-sidebar-nav-icon bi bi-key" style="line-height: 1;"></i> {{ __('sidebar.roles_permissions') }}
+        </a>
+    </li>
+    @endcan
+    <li class="c-sidebar-nav-item">
+        <a class="c-sidebar-nav-link {{ request()->routeIs('settings*') ? 'c-active' : '' }}" href="{{ route('settings.index') }}">
+            <i class="c-sidebar-nav-icon bi bi-sliders" style="line-height: 1;"></i> {{ __('sidebar.system_settings') }}
+        </a>
+    </li>
+    @can('access_units')
+    <li class="c-sidebar-nav-item">
+        <a class="c-sidebar-nav-link {{ request()->routeIs('units*') ? 'c-active' : '' }}" href="{{ route('units.index') }}">
+            <i class="c-sidebar-nav-icon bi bi-calculator" style="line-height: 1;"></i> {{ __('sidebar.units') }}
+        </a>
+    </li>
+    @endcan
+    @can('access_currencies')
+    <li class="c-sidebar-nav-item">
+        <a class="c-sidebar-nav-link {{ request()->routeIs('currencies*') ? 'c-active' : '' }}" href="{{ route('currencies.index') }}">
+            <i class="c-sidebar-nav-icon bi bi-cash-stack" style="line-height: 1;"></i> {{ __('sidebar.currencies') }}
+        </a>
+    </li>
+    @endcan
 @endcan
