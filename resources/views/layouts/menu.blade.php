@@ -218,7 +218,7 @@
 <li class="c-sidebar-nav-title">{{ __('sidebar.settings') }}</li>
 @endcanany
 
-@can('access_user_management')
+@can('access_user_management | access_settings')
 <li class="c-sidebar-nav-item">
     <a class="c-sidebar-nav-link {{ request()->routeIs('users.create') ? 'c-active' : '' }}" href="{{ route('users.create') }}">
         <i class="c-sidebar-nav-icon bi bi-person-plus" style="line-height: 1;"></i> {{ __('sidebar.create_user') }}
@@ -237,14 +237,14 @@
 @endcan
 
 
-@can('access_units')
+@can('access_units | access_settings')
 <li class="c-sidebar-nav-item">
     <a class="c-sidebar-nav-link {{ request()->routeIs('units*') ? 'c-active' : '' }}" href="{{ route('units.index') }}">
         <i class="c-sidebar-nav-icon bi bi-calculator" style="line-height: 1;"></i> {{ __('sidebar.units') }}
     </a>
 </li>
 @endcan
-@can('access_currencies')
+@can('access_currencies | access_settings')
 <li class="c-sidebar-nav-item">
     <a class="c-sidebar-nav-link {{ request()->routeIs('currencies*') ? 'c-active' : '' }}" href="{{ route('currencies.index') }}">
         <i class="c-sidebar-nav-icon bi bi-cash-stack" style="line-height: 1;"></i> {{ __('sidebar.currencies') }}
