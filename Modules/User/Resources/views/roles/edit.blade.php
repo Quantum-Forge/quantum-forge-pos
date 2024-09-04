@@ -512,7 +512,7 @@
                                                     <div class="custom-control custom-switch">
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="show_sales" name="permissions[]"
-                                                               value="show_suppliers" {{ $role->hasPermissionTo('show_sales') ? 'checked' : '' }}>
+                                                               value="show_sales" {{ $role->hasPermissionTo('show_sales') ? 'checked' : '' }}>
                                                         <label class="custom-control-label" for="show_sales">{{ __('user.role_create.permission.sales.view') }}</label>
                                                     </div>
                                                 </div>
